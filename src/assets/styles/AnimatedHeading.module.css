@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
+.heading {
+  transform: translate(100px, 200%) rotate(25deg);
+  margin: 12px 0;
+  display: inline-block;
+  font-size: 86px;
+  transform-origin: 0 50%;
+  animation: animate 675ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(100px, 200%) rotate(25deg);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translate(0px, 0%);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,54 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.marqueeletter {
+  transform-origin: 0 300%;
+  display: inline-block;
+  transform: translate(0px, 300%);
+  animation: drop 675ms;
+  animation-fill-mode: forwards;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.marquee_inner {
+  display: flex;
+  width: fit-content;
+  transform: translate3d(0, 0, 0);
+  animation: marquee 16s linear infinite;
+}
+
+.marquee span {
+  display: block;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+      transform: translate3d(-67.5%, 0, 0);
+  }
+}
+
+@keyframes drop {
+  0%{
+    transform: translate(0px, 300%);
+  }
+  100%{
+    transform: translate(0px, 0px);
+  }
+}
+

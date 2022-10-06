@@ -16,6 +16,9 @@
   padding: 0;
 }
 
+.active {
+
+}
 
 .line {
   fill: var(--color-primary);

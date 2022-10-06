@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 import styles from '../assets/styles/Hamburger.module.css';
 
 interface HamburgerProps {}
 
 const Hamburger: React.FC<HamburgerProps> = ({}) => {
+  const [active, setActive] = useState(false);
+
+  const handleClick: React.MouseEventHandler<HTMLButtonElement> =
+    useCallback((): void => {
+      setActive((prevState) => !prevState);
+    }, []);
+
   return (
-    <div className={styles.hamburger}>
-      <button className={styles.toggler} aria-label="Menu">
+    <div className={`${styles.hamburger} ${active ? styles.active : ''}`}>
+      <button
+        className={styles.toggler}
+        aria-label="Menu"
+        onClick={handleClick}
+      >
         <svg viewBox="0 0 80 50" width="30" height="40">
           <rect
             width="70"

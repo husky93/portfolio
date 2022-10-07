@@ -24,7 +24,7 @@
 }
 
 .line {
-  fill: var(--color-light);
+  fill: var(--color-text);
 }
 
 .hamburger .line {

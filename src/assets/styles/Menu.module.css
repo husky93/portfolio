@@ -13,8 +13,28 @@
   display: flex;
   justify-content: center;
   gap: 48px;
+  position: relative;
 }
 
 .item {
   cursor: pointer;
+  transition: transform 300ms;
+  transform: translate(0px, 100px);
+}
+
+.navigation.active .item {
+  transform: translate(0px, 0px);
+}
+
+.navigation.active .item:nth-of-type(1) {
+  transition-delay: 100ms;
+}
+.navigation.active .item:nth-of-type(2) {
+  transition-delay: 200ms;
+}
+.navigation.active .item:nth-of-type(3) {
+  transition-delay: 300ms;
+}
+.navigation.active .item:nth-of-type(4) {
+  transition-delay: 400ms;
 }

@@ -21,5 +21,122 @@
 }
 
 .line {
-  fill: var(--color-primary);
+  fill: var(--color-light);
+}
+
+.hamburger .line {
+  animation-fill-mode: forwards;
+  animation-duration: 500ms;
+}
+
+
+.hamburger .line:nth-of-type(1) {
+  animation-name: from-left;
+}
+
+.hamburger .line:nth-of-type(2) {
+  animation-name: appear;
+}
+
+.hamburger .line:nth-of-type(3) {
+  animation-name: from-right;
+}
+
+.hamburger.active .line:nth-of-type(1) {
+  animation-name: go-left;
+}
+
+.hamburger.active .line:nth-of-type(2) {
+  animation-name: disappear;
+}
+
+.hamburger.active .line:nth-of-type(3) {
+  animation-name: go-right;
+
+}
+
+
+
+
+
+@keyframes go-left {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-100px, 0);
+  }
+  60% {
+    transform: rotate(45deg) translate(-100px, -45px);
+  }
+  100% {
+    transform: rotate(45deg) translate(10px, -15px);
+  }
+}
+
+@keyframes go-right {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(100px, 0);
+  }
+  60% {
+    transform: rotate(-45deg) translate(100px, 45px);
+  }
+  100% {
+    transform: rotate(-45deg) translate(-30px, 4px);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-100px, 0px);
+  }
+}
+
+@keyframes from-left {
+  0% {
+    transform: rotate(45deg) translate(10px, -15px);
+    
+  }
+  50% {
+    transform: rotate(45deg) translate(-100px, -45px);
+    
+  }
+  60% {
+    transform: rotate(0deg) translate(-100px, 0);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes from-right {
+  0% {
+    transform: rotate(-45deg) translate(-30px, 4px);
+    
+  }
+  50% {
+    transform: rotate(-45deg) translate(100px, 45px);
+    
+  }
+  60% {
+    transform: rotate(0deg) translate(100px, 0);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(-100px, 0px);  
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
 }

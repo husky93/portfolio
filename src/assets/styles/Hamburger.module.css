@@ -12,7 +12,7 @@
   position: absolute;
   border: none;
   padding: 0;
-  right: 48px;
+  right: 24px;
 }
 
 .preload {
@@ -31,7 +31,6 @@
   animation-fill-mode: forwards;
   animation-duration: 500ms;
 }
-
 
 .hamburger .line:nth-of-type(1) {
   animation-name: from-left;
@@ -59,9 +58,11 @@
 
 }
 
-
-
-
+@media screen and (min-width: 768px) {
+  .toggler {
+    right: 48px;
+  }
+}
 
 @keyframes go-left {
   0% {

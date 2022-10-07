@@ -7,12 +7,13 @@
 }
 
 .list {
-  padding: 36px;
-  overflow-y: hidden;
+  padding: 0;
+  overflow: hidden;
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 48px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   position: relative;
 }
 
@@ -37,4 +38,21 @@
 }
 .navigation.active .item:nth-of-type(4) {
   transition-delay: 400ms;
+}
+
+
+
+@media screen and (min-width: 595px) {
+  .list {
+    padding: 36px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list {
+    gap: 48px;
+  }
 }

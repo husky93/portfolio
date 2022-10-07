@@ -9,7 +9,7 @@ interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = ({}) => {
   return (
-    <div className={styles.hero}>
+    <section className={styles.hero}>
       <HeroBackground />
       <div className={styles.content}>
         <div>
@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
           textInitial="Frontend Developer"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

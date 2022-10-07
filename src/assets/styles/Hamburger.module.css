@@ -16,6 +16,10 @@
   padding: 0;
 }
 
+.preload {
+  animation-duration: 0s !important;
+}
+
 .active {
 
 }
@@ -48,6 +52,7 @@
 
 .hamburger.active .line:nth-of-type(2) {
   animation-name: disappear;
+  animation-delay: 100ms;
 }
 
 .hamburger.active .line:nth-of-type(3) {

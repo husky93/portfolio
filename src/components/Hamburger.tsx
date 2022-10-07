@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../assets/styles/Hamburger.module.css';
 
 interface HamburgerProps {
@@ -7,6 +7,12 @@ interface HamburgerProps {
 }
 
 const Hamburger: React.FC<HamburgerProps> = ({ active, handleClick }) => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 500);
+  }, []);
+
   return (
     <div className={`${styles.hamburger} ${active ? styles.active : ''}`}>
       <button
@@ -20,14 +26,14 @@ const Hamburger: React.FC<HamburgerProps> = ({ active, handleClick }) => {
             height="7"
             rx="8"
             x="5"
-            className={styles.line}
+            className={`${styles.line} ${loaded ? '' : styles.preload}`}
           ></rect>
           <rect
             y="20"
             width="80"
             height="7"
             rx="8"
-            className={styles.line}
+            className={`${styles.line} ${loaded ? '' : styles.preload}`}
           ></rect>
           <rect
             y="40"
@@ -35,7 +41,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ active, handleClick }) => {
             height="7"
             rx="8"
             x="5"
-            className={styles.line}
+            className={`${styles.line} ${loaded ? '' : styles.preload}`}
           ></rect>
         </svg>
       </button>

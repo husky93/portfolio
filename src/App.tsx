@@ -9,7 +9,18 @@ function App() {
   const [menuActive, setMenuActive] = useState(false);
 
   const toggleMenu: React.MouseEventHandler<HTMLButtonElement> = (): void => {
+    if (!menuActive) {
+      window.scrollTo(0, 0);
+      document.body.classList.add('stop-scroll');
+    }
+    if (menuActive) {
+      document.body.classList.remove('stop-scroll');
+    }
     setMenuActive((prevState) => !prevState);
+  };
+
+  const preventScroll = (event: Event): void => {
+    event.preventDefault();
   };
 
   return (

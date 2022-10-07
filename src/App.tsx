@@ -9,7 +9,9 @@ const Hamburger = lazy(() => import('./components/Hamburger'));
 function App() {
   const [menuActive, setMenuActive] = useState(false);
 
-  const toggleMenu: React.MouseEventHandler<HTMLButtonElement> = (): void => {
+  const toggleMenu: React.MouseEventHandler<
+    HTMLButtonElement | HTMLAnchorElement
+  > = (): void => {
     if (!menuActive) {
       window.scrollTo(0, 0);
       document.body.classList.add('stop-scroll');
@@ -28,7 +30,7 @@ function App() {
     <Suspense fallback={<Loading />}>
       <div className={styles.container}>
         <Hamburger active={menuActive} handleClick={toggleMenu} />
-        <Menu active={menuActive} />
+        <Menu active={menuActive} handleLinkClick={toggleMenu} />
         <main className={`${styles.main} ${menuActive ? styles.active : ''}`}>
           <Hero />
         </main>

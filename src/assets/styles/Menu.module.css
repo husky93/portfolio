@@ -1,0 +1,20 @@
+.navigation {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.list {
+  padding: 36px;
+  overflow-y: hidden;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+}
+
+.item {
+  cursor: pointer;
+}

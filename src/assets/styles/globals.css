@@ -1,3 +1,10 @@
+:root {
+  --screen-sm: 595px;
+  --screen-md: 768px;
+  --screen-lg: 889px;
+  --screen-xl: 1200px;
+}
+
 :root.dark {
   --color-text: #FFFBFC;
   --color-bg:#010400 ;
@@ -18,7 +25,7 @@ html,
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: var(--color-text);
-  background: var(--color-bg);
+  background: var(--color-dark);
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,

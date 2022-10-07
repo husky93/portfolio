@@ -2,6 +2,7 @@ import { useState, Suspense, lazy } from 'react';
 import Loading from './components/Loading';
 import styles from './assets/styles/Home.module.css';
 
+const Menu = lazy(() => import('./components/Menu'));
 const Hero = lazy(() => import('./components/Hero'));
 const Hamburger = lazy(() => import('./components/Hamburger'));
 
@@ -27,6 +28,7 @@ function App() {
     <Suspense fallback={<Loading />}>
       <div className={styles.container}>
         <Hamburger active={menuActive} handleClick={toggleMenu} />
+        <Menu active={menuActive} />
         <main className={`${styles.main} ${menuActive ? styles.active : ''}`}>
           <Hero />
         </main>

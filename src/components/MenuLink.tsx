@@ -3,6 +3,7 @@ import styles from '../assets/styles/Menu.module.css';
 
 interface MenuLinkProps {
   children: React.ReactNode;
+  handleClick?: React.MouseEventHandler<HTMLLIElement>;
   to: string;
 }
 

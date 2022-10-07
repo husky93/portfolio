@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  background-color: var(--color-dark);
+  max-width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+  background-color: var(--color-bg);
+  width: 100%;
+  transition: all 300ms;
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 6px -1px, rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
+}
+
+.active {
+  perspective: 0px;
+  transform: perspective(1100px) translate3d(0px, 75px, -200px);
+}
+

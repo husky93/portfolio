@@ -26,8 +26,8 @@ function App() {
   return (
     <Suspense fallback={<Loading />}>
       <div className={styles.container}>
-        <main className={styles.main}>
-          <Hamburger active={menuActive} handleClick={toggleMenu} />
+        <Hamburger active={menuActive} handleClick={toggleMenu} />
+        <main className={`${styles.main} ${menuActive ? styles.active : ''}`}>
           <Hero />
         </main>
       </div>

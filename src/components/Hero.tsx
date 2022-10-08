@@ -1,4 +1,5 @@
-import React, { lazy } from 'react';
+import React, { lazy, useEffect } from 'react';
+import { useObserver } from '../app/hooks';
 import styles from '../assets/styles/Hero.module.css';
 
 const HeroBackground = lazy(() => import('./HeroBackground'));
@@ -8,19 +9,35 @@ const Marquee = lazy(() => import('./Marquee'));
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = ({}) => {
+  const { isVisible, containerRef } = useObserver(0.001);
+  console.log(isVisible);
+
+  useEffect(() => {
+    const htmlElement = document.firstElementChild;
+    if (isVisible) {
+      htmlElement?.classList.add('dark');
+      htmlElement?.classList.remove('light');
+    }
+    if (!isVisible) {
+      htmlElement?.classList.remove('dark');
+      htmlElement?.classList.add('light');
+    }
+  }, [isVisible]);
+
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} dark`} ref={containerRef}>
       <HeroBackground />
       <div className={styles.content}>
-        <div>
+        <h1>
           <AnimatedHeading text="Maciej" />
           <AnimatedHeading text="Sroka" />
-        </div>
+        </h1>
         <Marquee
           textFull="Frontend Developer • JavaScript • TypeScript • React"
           textInitial="Frontend Developer"
         />
       </div>
+      <div ref={containerRef} style={{ height: '1px' }}></div>
     </section>
   );
 };

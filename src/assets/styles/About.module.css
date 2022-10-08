@@ -45,6 +45,7 @@
 .desc {
   font-size: 16px;
   padding: 6px 24px;
+  font-weight: 300;
 }
 
 .about.in_viewport .content .right {

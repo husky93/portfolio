@@ -5,6 +5,8 @@ import styles from './assets/styles/Home.module.css';
 const Menu = lazy(() => import('./components/Menu'));
 const Hero = lazy(() => import('./components/Hero'));
 const Hamburger = lazy(() => import('./components/Hamburger'));
+const About = lazy(() => import('./components/About'));
+const Skills = lazy(() => import('./components/Skills'));
 
 function App() {
   const [menuActive, setMenuActive] = useState(false);
@@ -22,10 +24,6 @@ function App() {
     setMenuActive((prevState) => !prevState);
   };
 
-  const preventScroll = (event: Event): void => {
-    event.preventDefault();
-  };
-
   return (
     <Suspense fallback={<Loading />}>
       <div className={styles.container}>
@@ -33,6 +31,8 @@ function App() {
         <Menu active={menuActive} handleLinkClick={toggleMenu} />
         <main className={`${styles.main} ${menuActive ? styles.active : ''}`}>
           <Hero />
+          <About />
+          <Skills />
         </main>
       </div>
     </Suspense>

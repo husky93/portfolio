@@ -7,10 +7,11 @@ interface ImageProps {
 
 const ImageComponent: React.FC<ImageProps> = ({ alt, imgName }) => {
   const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadImage = async (): Promise<void> => {
-      const imgModule: string = await import(`../assets/images/${imgName}.png`)
+      const imgModule: string = await import(`../assets/images/${imgName}.webp`)
         .then((module) => module.default)
         .catch((err) =>
           console.error('Error while trying to import image' + err)
@@ -25,16 +26,13 @@ const ImageComponent: React.FC<ImageProps> = ({ alt, imgName }) => {
         imgNode.src = imgModule;
       });
       setImgSrc(image.src);
+      setLoading(false);
     };
 
     loadImage();
   }, [imgName]);
 
-  return (
-    <div>
-      <img alt={alt} src={imgSrc} />
-    </div>
-  );
+  return <img style={{ display: 'block' }} alt={alt} src={imgSrc} />;
 };
 
 export default ImageComponent;

@@ -12,6 +12,7 @@
 
 .content {
   display: flex;
+  flex-direction: column;
   gap: 48px;
   align-items: center;
 }
@@ -42,7 +43,8 @@
 }
 
 .desc {
-  padding: 24px;
+  font-size: 16px;
+  padding: 6px 24px;
 }
 
 .about.in_viewport .content .right {
@@ -56,5 +58,21 @@
 
 .in_viewport {
 
+}
+
+@media screen and (max-height: 700px) {
+  .content {
+    gap: 8px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    flex-direction: row;
+  }
+  .desc {
+    font-size: 16px;
+    padding: 24px;
+  }
 }
 

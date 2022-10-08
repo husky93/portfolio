@@ -14,14 +14,12 @@
 
 .curtain.left {
   animation: reveal-left 800ms;
-  animation-delay: 500ms;
   animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   animation-fill-mode: forwards;
 }
 
 .curtain.right {
   animation: reveal-right 800ms;
-  animation-delay: 500ms;
   animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   animation-fill-mode: forwards;
 }
@@ -31,7 +29,7 @@
     transform: translateX(0px)
   }
   100% {
-    transform: translateX(-100%)
+    transform: translateX(-110%)
   }
 }
 
@@ -40,6 +38,6 @@
     transform: translateX(0px)
   }
   100% {
-    transform: translateX(100%)
+    transform: translateX(110%)
   }
 }

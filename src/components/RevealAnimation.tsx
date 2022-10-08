@@ -5,12 +5,14 @@ interface RevealAnimationProps {
   direction: 'left' | 'right';
   children: React.ReactNode;
   startAnimation: boolean;
+  delay: number;
 }
 
 const RevealAnimation: React.FC<RevealAnimationProps> = ({
   direction,
   children,
   startAnimation,
+  delay,
 }) => {
   return (
     <div className={styles.container}>
@@ -18,6 +20,7 @@ const RevealAnimation: React.FC<RevealAnimationProps> = ({
         className={`${styles.curtain} ${
           startAnimation ? styles[direction] : ''
         }`}
+        style={{ animationDelay: delay + 'ms' }}
       ></div>
       {children}
     </div>

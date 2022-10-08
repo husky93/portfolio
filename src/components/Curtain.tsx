@@ -1,14 +1,14 @@
 import React from 'react';
-import styles from '../assets/styles/RevealAnimation.module.css';
+import styles from '../assets/styles/Curtain.module.css';
 
-interface RevealAnimationProps {
+interface CurtainProps {
   direction: 'left' | 'right';
   children: React.ReactNode;
   startAnimation: boolean;
   delay: number;
 }
 
-const RevealAnimation: React.FC<RevealAnimationProps> = ({
+const Curtain: React.FC<CurtainProps> = ({
   direction,
   children,
   startAnimation,
@@ -27,4 +27,4 @@ const RevealAnimation: React.FC<RevealAnimationProps> = ({
   );
 };
 
-export default RevealAnimation;
+export default Curtain;

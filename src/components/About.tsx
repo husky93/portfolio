@@ -9,14 +9,13 @@ interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
   const [margin, setMargin] = useState<Array<number>>([0, 0]);
-  const aboutRef = useRef<HTMLElement>(null!);
   const { isVisible, containerRef } = useObserver(0.9);
-  const { offset } = useParallax(aboutRef);
+  const { offset, sectionRef } = useParallax();
 
   useEffect(() => {
     console.log(window.innerWidth);
     if (window.innerWidth >= 768) {
-      setMargin([80, 60]);
+      setMargin([80, 80]);
     }
     if (window.innerWidth < 768) {
       if (window.innerHeight > 740 && window.innerHeight < 800) {
@@ -37,7 +36,7 @@ const About: React.FC<AboutProps> = ({}) => {
         id="#about"
         aria-label="About"
         className={`${styles.about} ${isVisible ? styles.in_viewport : ''}`}
-        ref={aboutRef}
+        ref={sectionRef}
       >
         <div className={styles.content}>
           <div

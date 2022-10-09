@@ -8,4 +8,5 @@ interface ObserverObject {
 interface ParallaxObject {
   offset: number;
   windowHeight: React.MutableRefObject<number>;
+  sectionRef: React.MutableRefObject<HTMLElement>;
 }

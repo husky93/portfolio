@@ -16,10 +16,9 @@
 }
 
 .title {
-  font-family: 'Hahmlet', serif;
   transition: transform 250ms, opacity 350ms;
-  font-weight: 700;
   transform: translateY(-42px);
+  font-weight: 600;
   opacity: 0;
   z-index: 10;
   font-size: 15px;

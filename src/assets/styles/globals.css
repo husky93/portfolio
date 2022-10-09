@@ -9,20 +9,20 @@
 :root.dark {
   --color-text: #FFFBFC;
   --color-bg: #010400;
-  --color-dark: #30332E;
-  --color-primary: #6C91C2;
-  --color-secondary: #FE5F55;
-  --color-light: #987D7C;
+  --color-dark: #6D6466;
+  --color-primary: #007991;
+  --color-secondary: #439A86;
+  --color-light: #B88B4A;
   --color-grey: #9ca3af;
 }
 
 :root.light {
   --color-text: #010400;
   --color-bg: #FFFBFC;
-  --color-dark: #30332E;
-  --color-primary: #6C91C2;
-  --color-secondary: #FE5F55;
-  --color-light: #987D7C;
+  --color-dark: #6D6466;
+  --color-primary: #007991;
+  --color-secondary: #439A86;
+  --color-light: #B88B4A;
   --color-grey: #e2e8f0;
 }
 

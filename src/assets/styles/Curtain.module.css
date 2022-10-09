@@ -6,7 +6,8 @@
 
 .curtain {
   position: absolute;
-  background-color: var(--color-primary);
+  background-color: rgba(0, 121, 145, 1);
+  background-image: linear-gradient(90deg, rgba(0, 121, 145, 1) 35%, rgba(67, 154, 134, 1) 100%);
   width: 100%;
   height: 100%;
   z-index: 15;

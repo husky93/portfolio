@@ -8,7 +8,7 @@ interface SkillsItemProps {
 
 const SkillsItem: React.FC<SkillsItemProps> = ({ title, children }) => {
   return (
-    <li className={styles.item}>
+    <li className={styles.item} aria-label={title}>
       <div className={styles.icon}>{children}</div>
       <span className={styles.title}>{title}</span>
     </li>

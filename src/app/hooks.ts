@@ -28,16 +28,24 @@ export const useObserver = (threshold: number): ObserverObject => {
   return { containerRef, isVisible };
 };
 
-export const useParallax = (): ParallaxObject => {
+export const useParallax = (
+  ref: React.MutableRefObject<HTMLElement>
+): ParallaxObject => {
   const [offset, setOffset] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
+  const windowHeight = useRef(window.innerHeight);
+  const sectionDistanceTop = useRef(0);
 
   useEffect(() => {
-    const onScroll = () => setOffset(window.scrollY);
+    sectionDistanceTop.current =
+      ref.current.getBoundingClientRect().top + window.pageYOffset;
+    const onScroll = () => {
+      setOffset(window.scrollY - sectionDistanceTop.current);
+    };
+
     // clean up code
     window.removeEventListener('scroll', onScroll);
     window.addEventListener('scroll', onScroll, { passive: true });
-    setWindowHeight(window.innerHeight);
+
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 

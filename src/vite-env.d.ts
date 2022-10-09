@@ -7,5 +7,5 @@ interface ObserverObject {
 
 interface ParallaxObject {
   offset: number;
-  windowHeight: number;
+  windowHeight: React.MutableRefObject<number>;
 }

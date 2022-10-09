@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .content {
@@ -28,7 +29,7 @@
   opacity: 0.5;
   transform: translateX(-100vw);
   transition: transform 700ms ease-out, opacity 800ms ease-out;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow: 0 24px 43px rgb(25 17 34 / 20%), 0 20px 17px rgb(25 17 34 / 20%);
 }
 
 .about.in_viewport .content .left {

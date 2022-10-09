@@ -1,4 +1,4 @@
-import React, { lazy, useState } from 'react';
+import React, { lazy, useRef, useEffect, useState } from 'react';
 import { useObserver, useParallax } from '../app/hooks';
 import styles from '../assets/styles/About.module.css';
 
@@ -8,8 +8,28 @@ const Curtain = lazy(() => import('./Curtain'));
 interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
+  const [margin, setMargin] = useState<Array<number>>([0, 0]);
+  const aboutRef = useRef<HTMLElement>(null!);
   const { isVisible, containerRef } = useObserver(0.9);
-  const { offset, windowHeight } = useParallax();
+  const { offset } = useParallax(aboutRef);
+
+  useEffect(() => {
+    console.log(window.innerWidth);
+    if (window.innerWidth >= 768) {
+      setMargin([80, 60]);
+    }
+    if (window.innerWidth < 768) {
+      if (window.innerHeight > 740 && window.innerHeight < 800) {
+        setMargin([30, 0]);
+      }
+      if (window.innerHeight > 800) {
+        setMargin([20, -30]);
+      }
+      if (window.innerHeight <= 700) {
+        setMargin([-15, -40]);
+      }
+    }
+  }, []);
 
   return (
     <div>
@@ -17,6 +37,7 @@ const About: React.FC<AboutProps> = ({}) => {
         id="#about"
         aria-label="About"
         className={`${styles.about} ${isVisible ? styles.in_viewport : ''}`}
+        ref={aboutRef}
       >
         <div className={styles.content}>
           <div
@@ -25,8 +46,8 @@ const About: React.FC<AboutProps> = ({}) => {
               isVisible
                 ? {
                     transform: `translateX(0px) translateY(${
-                      (windowHeight / offset) * -10
-                    }px)`,
+                      offset / 8 - margin[0]
+                    }px) rotate(-1deg)`,
                   }
                 : {}
             }
@@ -41,7 +62,7 @@ const About: React.FC<AboutProps> = ({}) => {
               isVisible
                 ? {
                     transform: `translateX(0px) translateY(${
-                      (windowHeight / offset) * 10
+                      offset / 15 - margin[1]
                     }px)`,
                   }
                 : {}

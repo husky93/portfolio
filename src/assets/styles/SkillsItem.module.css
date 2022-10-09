@@ -1,0 +1,25 @@
+.item {
+  padding: 32px 24px;
+  max-width: 124px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.title {
+  transition: transform 250ms, opacity 350ms;
+  font-weight: 500;
+  transform: translateY(-42px);
+  opacity: 0;
+}
+
+.item:hover .title {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.icon * {
+  width: 75px;
+  height: 75px;
+}

@@ -1,0 +1,38 @@
+.skills {
+  position: relative;
+  padding: 0 48px;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.content {
+  text-align: center;
+  transform: translateY(75vh);
+  opacity: 0.3;
+  transition: transform 550ms, opacity 650ms;
+}
+
+.skills.in_viewport .content {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.in_viewport {
+  
+}
+
+
+
+
+

@@ -19,3 +19,8 @@ interface ParallaxStyleObject {
 type EmptyObject = {
   [K in any]: never;
 };
+
+type SkillsObject = {
+  icon: React.ReactNode;
+  title: string;
+};

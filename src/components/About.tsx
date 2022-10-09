@@ -31,12 +31,16 @@ const About: React.FC<AboutProps> = ({}) => {
   }, []);
 
   const setTransform = useCallback(
-    (margin: number, ratio: number): ParallaxStyleObject | EmptyObject => {
+    (
+      margin: number,
+      ratio: number,
+      rotation?: number
+    ): ParallaxStyleObject | EmptyObject => {
       return isVisible
         ? {
             transform: `translateX(0px) translateY(${
               offset / ratio - margin
-            }px)`,
+            }px) ${rotation ? `rotate(${rotation}deg)` : ''}`,
           }
         : {};
     },
@@ -52,7 +56,7 @@ const About: React.FC<AboutProps> = ({}) => {
         ref={sectionRef}
       >
         <div className={styles.content}>
-          <div className={styles.left} style={setTransform(margin[0], 8)}>
+          <div className={styles.left} style={setTransform(margin[0], 8, -1)}>
             <Curtain direction="left" startAnimation={isVisible} delay={750}>
               <Image alt="Placeholder" imgName="placeholder" />
             </Curtain>

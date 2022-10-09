@@ -7,9 +7,10 @@
 
 :root.dark {
   --color-text: #FFFBFC;
-  --color-bg:#010400 ;
+  --color-bg: #010400;
   --color-dark: #30332E;
-  --color-primary: #C89933;
+  --color-primary: #6C91C2;
+  --color-secondary: #FE5F55;
   --color-light: #987D7C;
 }
 
@@ -44,6 +45,12 @@ a {
 .stop-scroll {
   height: 100%;
   overflow: hidden;
+}
+
+.h2 {
+  font-family: 'Hahmlet', serif;
+  margin: 0;
+  font-weight: 900;
 }
 
 @media (prefers-color-scheme: dark) {

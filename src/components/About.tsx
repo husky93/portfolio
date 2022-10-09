@@ -57,21 +57,25 @@ const About: React.FC<AboutProps> = ({}) => {
       >
         <div className={styles.content}>
           <div className={styles.left} style={setTransform(margin[0], 8, -1)}>
-            <Curtain direction="left" startAnimation={isVisible} delay={750}>
+            <Curtain direction="left" startAnimation={isVisible} delay={500}>
               <Image alt="Placeholder" imgName="placeholder" />
             </Curtain>
           </div>
           <div className={styles.right} style={setTransform(margin[1], 15)}>
-            <Curtain direction="right" startAnimation={isVisible} delay={900}>
-              <p className={styles.desc}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+            <Curtain direction="right" startAnimation={isVisible} delay={1000}>
+              <div className={styles.about_text}>
+                <h2 className={`${styles.heading} h2`}>About Me</h2>
+                <p className={styles.desc}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
             </Curtain>
           </div>
         </div>

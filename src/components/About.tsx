@@ -1,4 +1,4 @@
-import React, { lazy, useRef, useEffect, useState } from 'react';
+import React, { lazy, useRef, useEffect, useState, useCallback } from 'react';
 import { useObserver, useParallax } from '../app/hooks';
 import styles from '../assets/styles/About.module.css';
 
@@ -30,6 +30,19 @@ const About: React.FC<AboutProps> = ({}) => {
     }
   }, []);
 
+  const setTransform = useCallback(
+    (margin: number, ratio: number): ParallaxStyleObject | EmptyObject => {
+      return isVisible
+        ? {
+            transform: `translateX(0px) translateY(${
+              offset / ratio - margin
+            }px)`,
+          }
+        : {};
+    },
+    [isVisible, offset]
+  );
+
   return (
     <div>
       <section
@@ -39,34 +52,12 @@ const About: React.FC<AboutProps> = ({}) => {
         ref={sectionRef}
       >
         <div className={styles.content}>
-          <div
-            className={styles.left}
-            style={
-              isVisible
-                ? {
-                    transform: `translateX(0px) translateY(${
-                      offset / 8 - margin[0]
-                    }px) rotate(-1deg)`,
-                  }
-                : {}
-            }
-          >
+          <div className={styles.left} style={setTransform(margin[0], 8)}>
             <Curtain direction="left" startAnimation={isVisible} delay={750}>
               <Image alt="Placeholder" imgName="placeholder" />
             </Curtain>
           </div>
-          <div
-            className={styles.right}
-            style={
-              isVisible
-                ? {
-                    transform: `translateX(0px) translateY(${
-                      offset / 15 - margin[1]
-                    }px)`,
-                  }
-                : {}
-            }
-          >
+          <div className={styles.right} style={setTransform(margin[1], 15)}>
             <Curtain direction="right" startAnimation={isVisible} delay={900}>
               <p className={styles.desc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

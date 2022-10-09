@@ -10,3 +10,11 @@ interface ParallaxObject {
   windowHeight: React.MutableRefObject<number>;
   sectionRef: React.MutableRefObject<HTMLElement>;
 }
+
+interface ParallaxStyleObject {
+  transform: string;
+}
+
+type EmptyObject = {
+  [K in any]: never;
+};

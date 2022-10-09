@@ -3,6 +3,7 @@
   --screen-md: 768px;
   --screen-lg: 889px;
   --screen-xl: 1200px;
+  --box-shadow-sm: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 :root.dark {
@@ -12,6 +13,7 @@
   --color-primary: #6C91C2;
   --color-secondary: #FE5F55;
   --color-light: #987D7C;
+  --color-grey: #9ca3af;
 }
 
 :root.light {
@@ -19,7 +21,9 @@
   --color-bg: #FFFBFC;
   --color-dark: #30332E;
   --color-primary: #6C91C2;
+  --color-secondary: #FE5F55;
   --color-light: #987D7C;
+  --color-grey: #e2e8f0;
 }
 
 html,

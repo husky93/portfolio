@@ -1,17 +1,81 @@
 .item {
-  padding: 32px 24px;
+  position: relative;
+  padding: 18px 24px;
   max-width: 124px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   align-items: center;
+  transition: color 0.2s, box-shadow 0.30s;
+  border-radius: 6px;
+}
+
+.icon {
+  z-index: 11;
+  background-color: var(--color-bg);
 }
 
 .title {
+  font-family: 'Hahmlet', serif;
   transition: transform 250ms, opacity 350ms;
-  font-weight: 500;
+  font-weight: 700;
   transform: translateY(-42px);
   opacity: 0;
+  z-index: 10;
+  font-size: 15px;
+  color: var(--color-primary);
+
+}
+
+.item::before,
+.item::after {
+  box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  width: 0;
+  height: 0;
+  border-radius: 6px;
+}
+
+.item::before {
+  bottom: 0;
+  left: 0;
+}
+
+.item::after {
+  bottom: 0;
+  left: 0;
+}
+
+.item:hover::before,
+.item:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+.item:hover::after {
+  border-left-color: var(--color-grey);
+  border-top-color: var(--color-grey);
+  transition:
+  height 0.2s ease-out,
+  width 0.2s ease-out 0.2s;
+
+}
+
+.item:hover::before {
+  border-bottom-color: var(--color-grey);
+  border-right-color: var(--color-grey);
+  transition:
+    width 0.2s ease-out,
+    height 0.2s ease-out 0.2s;
+    
+}
+
+.item:hover {
+  box-shadow: var(--box-shadow-sm);
 }
 
 .item:hover .title {

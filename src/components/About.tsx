@@ -10,10 +10,9 @@ interface AboutProps {}
 const About: React.FC<AboutProps> = ({}) => {
   const [margin, setMargin] = useState<Array<number>>([0, 0]);
   const { isVisible, containerRef } = useObserver(0.9);
-  const { offset, sectionRef } = useParallax();
+  const { offset, sectionRef, windowHeight } = useParallax();
 
   useEffect(() => {
-    console.log(window.innerWidth);
     if (window.innerWidth >= 768) {
       setMargin([80, 80]);
     }
@@ -25,7 +24,7 @@ const About: React.FC<AboutProps> = ({}) => {
         setMargin([20, -30]);
       }
       if (window.innerHeight <= 700) {
-        setMargin([-15, -40]);
+        setMargin([0, -40]);
       }
     }
   }, []);
@@ -36,11 +35,15 @@ const About: React.FC<AboutProps> = ({}) => {
       ratio: number,
       rotation?: number
     ): ParallaxStyleObject | EmptyObject => {
+      let offsetRotation;
+      if (rotation)
+        offsetRotation =
+          rotation + rotation * -((2 * offset) / windowHeight.current);
       return isVisible
         ? {
             transform: `translateX(0px) translateY(${
               offset / ratio - margin
-            }px) ${rotation ? `rotate(${rotation}deg)` : ''}`,
+            }px) ${rotation ? `rotate(${offsetRotation}deg)` : ''}`,
           }
         : {};
     },
@@ -56,7 +59,7 @@ const About: React.FC<AboutProps> = ({}) => {
         ref={sectionRef}
       >
         <div className={styles.content}>
-          <div className={styles.left} style={setTransform(margin[0], 8, -1)}>
+          <div className={styles.left} style={setTransform(margin[0], 8, -2)}>
             <Curtain direction="left" startAnimation={isVisible} delay={500}>
               <Image alt="Placeholder" imgName="placeholder" />
             </Curtain>

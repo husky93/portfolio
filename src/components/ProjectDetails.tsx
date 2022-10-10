@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import styles from 'ProjectDetails.module.css';
+import styles from '../assets/styles/ProjectDetails.module.css';
 
 const Card = lazy(() => import('./Card'));
 
@@ -17,8 +17,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   return (
     <Card>
       <h3 className={styles.title}>{title}</h3>
-      <span className={styles.subtext}>Technologies used:</span>
-      <div className={styles.technologies}>{children}</div>
+      <div className={styles.technologies}>
+        <span className={styles.subtext}>Technologies:</span>
+        {children}
+      </div>
       <p className={styles.description}>{description}</p>
     </Card>
   );

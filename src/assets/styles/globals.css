@@ -4,6 +4,7 @@
   --screen-lg: 889px;
   --screen-xl: 1200px;
   --box-shadow-sm: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  --box-shadow-lg: 0 24px 43px rgb(25 17 34 / 20%), 0 20px 17px rgb(25 17 34 / 20%);
   --border-radius: 0.25rem;
 }
 
@@ -12,6 +13,7 @@
   --color-bg: #010400;
   --color-dark: #6D6466;
   --color-primary: #007991;
+  --color-primary-light: #ADF1FF;
   --color-secondary: #439A86;
   --color-light: #B88B4A;
   --color-grey: #9ca3af;
@@ -22,6 +24,7 @@
   --color-bg: #FFFBFC;
   --color-dark: #6D6466;
   --color-primary: #007991;
+  --color-primary-light: #ADF1FF;
   --color-secondary: #439A86;
   --color-light: #B88B4A;
   --color-grey: #e2e8f0;

@@ -23,6 +23,7 @@
   transform: translateX(-100vw);
   transition: transform 500ms ease-out, opacity 600ms ease-out;
   box-shadow: 0 24px 43px rgb(25 17 34 / 20%), 0 20px 17px rgb(25 17 34 / 20%);
+  border-radius: var(--border-radius);
 }
 
 .about.in_viewport .content .left {
@@ -34,6 +35,7 @@
   transform: translateX(100vw);
   transition: transform 500ms ease-out, opacity 600ms ease-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: var(--border-radius);
 }
 
 .about_text {

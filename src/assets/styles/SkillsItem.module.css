@@ -7,7 +7,7 @@
   gap: 12px;
   align-items: center;
   transition: color 0.2s, box-shadow 0.30s;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
 }
 
 .icon {
@@ -36,7 +36,7 @@
   border: 1px solid transparent;
   width: 0;
   height: 0;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
 }
 
 .item::before {

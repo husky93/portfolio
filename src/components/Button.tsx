@@ -6,10 +6,12 @@ interface ButtonProps {
   navigateTo: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, navigateTo }) => {
+const Button: React.FC<ButtonProps> = ({ children, navigateTo }) => {
   return (
     <a className={styles.button} href={navigateTo}>
       {children}
     </a>
   );
 };
+
+export default Button;

@@ -31,12 +31,13 @@ export const useObserver = (threshold: number): ObserverObject => {
 export const useParallax = (): ParallaxObject => {
   const [offset, setOffset] = useState(0);
   const windowHeight = useRef(window.innerHeight);
-  const sectionRef = useRef<HTMLElement>(null!);
+  const sectionRef = useRef<HTMLElement | null>(null!);
   const sectionDistanceTop = useRef(0);
 
   useEffect(() => {
-    sectionDistanceTop.current =
-      sectionRef.current.getBoundingClientRect().top + window.pageYOffset;
+    if (sectionRef.current)
+      sectionDistanceTop.current =
+        sectionRef.current.getBoundingClientRect().top + window.pageYOffset;
     const onScroll = () => {
       setOffset(window.scrollY - sectionDistanceTop.current);
     };

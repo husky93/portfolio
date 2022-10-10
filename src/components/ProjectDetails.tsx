@@ -1,18 +1,25 @@
 import React, { lazy } from 'react';
 import styles from '../assets/styles/ProjectDetails.module.css';
+import { ReactComponent as GhIcon } from '../assets/icons/github.svg';
+import { ReactComponent as WebIcon } from '../assets/icons/web.svg';
 
 const Card = lazy(() => import('./Card'));
+const Button = lazy(() => import('./Button'));
 
 interface ProjectDetailsProps {
   children: React.ReactNode;
   title: string;
   description: string;
+  ghLink?: string;
+  liveLink?: string;
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   children,
   title,
   description,
+  ghLink,
+  liveLink,
 }) => {
   return (
     <Card>
@@ -22,6 +29,18 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         {children}
       </div>
       <p className={styles.description}>{description}</p>
+      <div className={styles.ui}>
+        {ghLink && (
+          <Button navigateTo={ghLink}>
+            <GhIcon /> Code
+          </Button>
+        )}
+        {liveLink && (
+          <Button navigateTo={liveLink}>
+            <WebIcon /> Live Demo
+          </Button>
+        )}
+      </div>
     </Card>
   );
 };

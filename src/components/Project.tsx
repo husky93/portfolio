@@ -12,6 +12,8 @@ interface ProjectProps {
   children: React.ReactNode;
   title: string;
   description: string;
+  ghLink?: string;
+  liveLink?: string;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -20,11 +22,18 @@ const Project: React.FC<ProjectProps> = ({
   imageName,
   title,
   description,
+  ghLink,
+  liveLink,
 }) => {
   const { containerRef, isVisible } = useObserver(1);
   const renderDetails = () => {
     return (
-      <ProjectDetails title={title} description={description}>
+      <ProjectDetails
+        title={title}
+        description={description}
+        ghLink={ghLink}
+        liveLink={liveLink}
+      >
         {children}
       </ProjectDetails>
     );

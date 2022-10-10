@@ -1,4 +1,5 @@
 import React, { lazy } from 'react';
+import { useParallax, useObserver } from '../app/hooks';
 import styles from '../assets/styles/Project.module.css';
 
 const ProjectDetails = lazy(() => import('./ProjectDetails'));
@@ -20,6 +21,7 @@ const Project: React.FC<ProjectProps> = ({
   title,
   description,
 }) => {
+  const { containerRef, isVisible } = useObserver(1);
   const renderDetails = () => {
     return (
       <ProjectDetails title={title} description={description}>
@@ -32,7 +34,9 @@ const Project: React.FC<ProjectProps> = ({
   };
 
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${isVisible ? styles.in_viewport : ''}`}
+    >
       <div
         className={`${styles.left} ${
           imagePosition === 'left' ? styles.image : ''
@@ -47,6 +51,7 @@ const Project: React.FC<ProjectProps> = ({
       >
         {imagePosition === 'right' ? renderImage() : renderDetails()}
       </div>
+      <div ref={containerRef}></div>
     </div>
   );
 };

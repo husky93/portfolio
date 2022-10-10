@@ -12,3 +12,22 @@
 .left:not(.image), .right:not(.image) {
   flex: 1;
 }
+
+.left, .right {
+  transition: transform 500ms ease-out, opacity 600ms ease-out;
+}
+
+.left {
+  transform: translateX(-100vw);
+  opacity: 0.3;
+}
+
+.right {
+  transform: translateX(100vw);
+  opacity: 0.3;
+}
+
+.container.in_viewport .left, .container.in_viewport .right {
+  transform: translateX(0px);
+  opacity: 1;
+}

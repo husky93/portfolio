@@ -26,6 +26,8 @@ const Project: React.FC<ProjectProps> = ({
   liveLink,
 }) => {
   const { containerRef, isVisible } = useObserver(1);
+  const { sectionRef, offset } = useParallax();
+
   const renderDetails = () => {
     return (
       <ProjectDetails
@@ -42,14 +44,24 @@ const Project: React.FC<ProjectProps> = ({
     return <Image alt="" imgName={imageName} />;
   };
 
+  const setTransform = (position: 'left' | 'right') => {
+    return isVisible && imagePosition === position
+      ? {
+          transform: `translateX(0px) translateY(${offset / 20}px)`,
+        }
+      : {};
+  };
+
   return (
     <div
       className={`${styles.container} ${isVisible ? styles.in_viewport : ''}`}
+      ref={sectionRef}
     >
       <div
         className={`${styles.left} ${
           imagePosition === 'left' ? styles.image : ''
         }`}
+        style={setTransform('left')}
       >
         {imagePosition === 'left' ? renderImage() : renderDetails()}
       </div>
@@ -57,6 +69,7 @@ const Project: React.FC<ProjectProps> = ({
         className={`${styles.right} ${
           imagePosition === 'right' ? styles.image : ''
         }`}
+        style={setTransform('right')}
       >
         {imagePosition === 'right' ? renderImage() : renderDetails()}
       </div>

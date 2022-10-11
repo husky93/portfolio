@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import styles from '../../assets/styles/hero/AlternatingText.module.css';
 
 interface AlternatingTextProps {
@@ -7,10 +7,15 @@ interface AlternatingTextProps {
 
 const AlternatingText: React.FC<AlternatingTextProps> = ({ text }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
+  const isFirstCycle = useRef(true);
 
   useEffect(() => {
     const textArrayLength = text.length;
+    if (isFirstCycle.current) {
+      setActive(true);
+      isFirstCycle.current = false;
+    }
     setTimeout(async () => {
       setActive(false);
       await setTimeout(() => {

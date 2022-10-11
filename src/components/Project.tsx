@@ -65,6 +65,7 @@ const Project: React.FC<ProjectProps> = ({
       >
         {imagePosition === 'left' ? renderImage() : renderDetails()}
       </div>
+      <div ref={containerRef}></div>
       <div
         className={`${styles.right} ${
           imagePosition === 'right' ? styles.image : ''
@@ -73,7 +74,6 @@ const Project: React.FC<ProjectProps> = ({
       >
         {imagePosition === 'right' ? renderImage() : renderDetails()}
       </div>
-      <div ref={containerRef}></div>
     </div>
   );
 };

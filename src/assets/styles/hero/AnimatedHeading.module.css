@@ -8,16 +8,17 @@
   transform: translate(100px, 200%) rotate(25deg);
   margin: 12px 0;
   display: inline-block;
-  font-size: 64px;
+  font-size: 72px;
   transform-origin: 0 50%;
   animation: animate 675ms;
   animation-fill-mode: forwards;
   font-weight: 900;
+  text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .heading {
-    font-size: 86px;
+    font-size: 92px;
   }
 }
 

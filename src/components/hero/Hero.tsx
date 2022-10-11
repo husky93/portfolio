@@ -4,7 +4,7 @@ import styles from '../../assets/styles/hero/Hero.module.css';
 
 const HeroBackground = lazy(() => import('./HeroBackground'));
 const AnimatedHeading = lazy(() => import('./AnimatedHeading'));
-const Marquee = lazy(() => import('./Marquee'));
+const AlternatingText = lazy(() => import('./AlternatingText'));
 
 interface HeroProps {}
 
@@ -31,9 +31,8 @@ const Hero: React.FC<HeroProps> = ({}) => {
           <AnimatedHeading text="Maciej" />
           <AnimatedHeading text="Sroka" />
         </h1>
-        <Marquee
-          textFull="Frontend Developer • JavaScript • TypeScript • React"
-          textInitial="Frontend Developer"
+        <AlternatingText
+          text={['Frontend Developer', 'JavaScript', 'TypeScript', 'React']}
         />
       </div>
       <div ref={containerRef} style={{ height: '1px' }}></div>

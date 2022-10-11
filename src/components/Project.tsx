@@ -26,7 +26,7 @@ const Project: React.FC<ProjectProps> = ({
   liveLink,
 }) => {
   const { containerRef, isVisible } = useObserver(1);
-  const { sectionRef, offset } = useParallax();
+  const { sectionRef, offset, windowHeight } = useParallax();
 
   const renderDetails = () => {
     return (
@@ -44,10 +44,14 @@ const Project: React.FC<ProjectProps> = ({
     return <Image alt="" imgName={imageName} />;
   };
 
-  const setTransform = (position: 'left' | 'right') => {
+  const setTransform = (position: 'left' | 'right', rotation: number) => {
+    const offsetRotation =
+      rotation + rotation * ((2 * offset) / windowHeight.current);
     return isVisible && imagePosition === position
       ? {
-          transform: `translateX(0px) translateY(${offset / 20}px)`,
+          transform: `translateX(0px) translateY(${
+            offset / 25
+          }px) rotate(${offsetRotation}deg)`,
         }
       : {};
   };
@@ -61,7 +65,7 @@ const Project: React.FC<ProjectProps> = ({
         className={`${styles.left} ${
           imagePosition === 'left' ? styles.image : ''
         }`}
-        style={setTransform('left')}
+        style={setTransform('left', -1)}
       >
         {imagePosition === 'left' ? renderImage() : renderDetails()}
       </div>
@@ -70,7 +74,7 @@ const Project: React.FC<ProjectProps> = ({
         className={`${styles.right} ${
           imagePosition === 'right' ? styles.image : ''
         }`}
-        style={setTransform('right')}
+        style={setTransform('right', 1)}
       >
         {imagePosition === 'right' ? renderImage() : renderDetails()}
       </div>

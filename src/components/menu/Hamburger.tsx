@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from '../assets/styles/Hamburger.module.css';
+import styles from '../../assets/styles/menu/Hamburger.module.css';
 
 interface HamburgerProps {
   active: boolean;

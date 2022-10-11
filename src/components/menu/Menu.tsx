@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import styles from '../assets/styles/Menu.module.css';
+import styles from '../../assets/styles/menu/Menu.module.css';
 
 const MenuLink = lazy(() => import('./MenuLink'));
 

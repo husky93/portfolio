@@ -1,6 +1,6 @@
 import React, { lazy, useEffect } from 'react';
-import { useObserver } from '../app/hooks';
-import styles from '../assets/styles/Hero.module.css';
+import { useObserver } from '../../app/hooks';
+import styles from '../../assets/styles/hero/Hero.module.css';
 
 const HeroBackground = lazy(() => import('./HeroBackground'));
 const AnimatedHeading = lazy(() => import('./AnimatedHeading'));
@@ -10,7 +10,6 @@ interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = ({}) => {
   const { isVisible, containerRef } = useObserver(0.001);
-  console.log(isVisible);
 
   useEffect(() => {
     const htmlElement = document.firstElementChild;

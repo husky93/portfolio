@@ -1,8 +1,8 @@
 import React, { lazy, useRef, useEffect, useState, useCallback } from 'react';
-import { useObserver, useParallax } from '../app/hooks';
-import styles from '../assets/styles/About.module.css';
+import { useObserver, useParallax } from '../../app/hooks';
+import styles from '../../assets/styles/about/About.module.css';
 
-const Image = lazy(() => import('./Image'));
+const Image = lazy(() => import('../Image'));
 const Curtain = lazy(() => import('./Curtain'));
 
 interface AboutProps {}

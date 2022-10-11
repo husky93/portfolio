@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styles from '../assets/styles/Marquee.module.css';
+import styles from '../../assets/styles/hero/Marquee.module.css';
 
 interface MarqueeProps {
   textInitial: string;

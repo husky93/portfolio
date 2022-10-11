@@ -32,7 +32,13 @@ const ImageComponent: React.FC<ImageProps> = ({ alt, imgName }) => {
     loadImage();
   }, [imgName]);
 
-  return <img style={{ display: 'block' }} alt={alt} src={imgSrc} />;
+  return (
+    <img
+      style={{ display: 'block', borderRadius: '0.25rem' }}
+      alt={alt}
+      src={imgSrc}
+    />
+  );
 };
 
 export default ImageComponent;

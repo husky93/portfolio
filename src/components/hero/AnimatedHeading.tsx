@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../assets/styles/AnimatedHeading.module.css';
+import styles from '../../assets/styles/hero/AnimatedHeading.module.css';
 
 interface AnimatedHeadingProps {
   text: string;
@@ -8,7 +8,7 @@ interface AnimatedHeadingProps {
 const AnimatedHeading: React.FC<AnimatedHeadingProps> = ({ text }) => {
   return (
     <div className={styles.container}>
-      <h2 className={styles.heading}>{text}</h2>
+      <span className={styles.heading}>{text}</span>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../assets/styles/Curtain.module.css';
+import styles from '../../assets/styles/about/Curtain.module.css';
 
 interface CurtainProps {
   direction: 'left' | 'right';

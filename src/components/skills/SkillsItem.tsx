@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../assets/styles/SkillsItem.module.css';
+import styles from '../../assets/styles/skills/SkillsItem.module.css';
 
 interface SkillsItemProps {
   children: React.ReactNode;

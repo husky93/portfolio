@@ -1,10 +1,9 @@
 import React, { lazy } from 'react';
-import { useParallax, useObserver } from '../app/hooks';
-import styles from '../assets/styles/Project.module.css';
+import { useParallax, useObserver } from '../../app/hooks';
+import styles from '../../assets/styles/portfolio/Project.module.css';
 
 const ProjectDetails = lazy(() => import('./ProjectDetails'));
-
-const Image = lazy(() => import('./Image'));
+const Image = lazy(() => import('../Image'));
 
 interface ProjectProps {
   imagePosition: 'left' | 'right';

@@ -1,10 +1,10 @@
 import React, { lazy } from 'react';
-import styles from '../assets/styles/ProjectDetails.module.css';
-import { ReactComponent as GhIcon } from '../assets/icons/github.svg';
-import { ReactComponent as WebIcon } from '../assets/icons/web.svg';
+import styles from '../../assets/styles/portfolio/ProjectDetails.module.css';
+import { ReactComponent as GhIcon } from '../../assets/icons/github.svg';
+import { ReactComponent as WebIcon } from '../../assets/icons/web.svg';
 
-const Card = lazy(() => import('./Card'));
-const Button = lazy(() => import('./Button'));
+const Card = lazy(() => import('../Card'));
+const Button = lazy(() => import('../Button'));
 
 interface ProjectDetailsProps {
   children: React.ReactNode;

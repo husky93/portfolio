@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../assets/styles/Menu.module.css';
+import styles from '../../assets/styles/menu/Menu.module.css';
 
 interface MenuLinkProps {
   children: React.ReactNode;

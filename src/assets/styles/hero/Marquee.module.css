@@ -2,7 +2,9 @@
   position: relative;
   overflow: hidden;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 800;
+  color: var(--color-primary);
+  transform: skew(-10deg);
 }
 
 .marqueeletter {

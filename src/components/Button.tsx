@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ children, navigateTo }) => {
   return (
-    <a className={styles.button} href={navigateTo}>
+    <a className={styles.button} href={navigateTo} target="_blank">
       {children}
     </a>
   );

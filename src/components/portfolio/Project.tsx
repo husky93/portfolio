@@ -34,6 +34,7 @@ const Project: React.FC<ProjectProps> = ({
         description={description}
         ghLink={ghLink}
         liveLink={liveLink}
+        hidden={!isVisible}
       >
         {children}
       </ProjectDetails>

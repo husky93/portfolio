@@ -9,7 +9,7 @@ const Badge = lazy(() => import('../Badge'));
 
 const Portfolio: React.FC<PortfolioProps> = ({}) => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} id="projects">
       <h2 className="h2">My Projects</h2>
       <Project
         title="Portfolio"

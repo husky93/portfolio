@@ -12,6 +12,7 @@ interface ProjectDetailsProps {
   description: string;
   ghLink?: string;
   liveLink?: string;
+  hidden?: boolean;
 }
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({
@@ -20,6 +21,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   description,
   ghLink,
   liveLink,
+  hidden,
 }) => {
   return (
     <Card>
@@ -31,12 +33,12 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
       <p className={styles.description}>{description}</p>
       <div className={styles.ui}>
         {ghLink && (
-          <Button navigateTo={ghLink}>
+          <Button navigateTo={ghLink} hidden={hidden}>
             <GhIcon /> Code
           </Button>
         )}
         {liveLink && (
-          <Button navigateTo={liveLink}>
+          <Button navigateTo={liveLink} hidden={hidden}>
             <WebIcon /> Live Demo
           </Button>
         )}

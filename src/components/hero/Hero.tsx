@@ -1,4 +1,4 @@
-import React, { lazy, useEffect } from 'react';
+import React, { lazy, MutableRefObject, useEffect } from 'react';
 import { useObserver } from '../../app/hooks';
 import styles from '../../assets/styles/hero/Hero.module.css';
 
@@ -8,7 +8,7 @@ const AlternatingText = lazy(() => import('./AlternatingText'));
 
 interface HeroProps {}
 
-const Hero: React.FC<HeroProps> = ({}) => {
+const Hero: React.FC<HeroProps> = () => {
   const { isVisible, containerRef } = useObserver(0.001);
 
   useEffect(() => {

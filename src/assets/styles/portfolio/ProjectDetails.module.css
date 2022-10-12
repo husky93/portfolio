@@ -3,3 +3,13 @@
   gap: 24px;
   flex-wrap: wrap;
 }
+.technologies {
+  display: flex;
+   gap: 8px;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.description {
+  font-weight: 300;
+}

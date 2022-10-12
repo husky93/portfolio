@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../../assets/styles/hero/Sphere.module.css';
 import { ReactComponent as JsIcon } from '../../assets/icons/js.svg';
 import { ReactComponent as TsIcon } from '../../assets/icons/typescript.svg';
@@ -41,12 +41,19 @@ const iconArray: Array<React.ReactNode> = [
 interface SphereProps {}
 
 const Sphere: React.FC<SphereProps> = ({}) => {
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    setActive(true);
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.sphere}>
         <div className={styles.container}>
           {iconArray.map((item) => (
-            <div className={styles.item}>{item}</div>
+            <div className={`${styles.item} ${active ? styles.active : ''}`}>
+              {item}
+            </div>
           ))}
         </div>
       </div>

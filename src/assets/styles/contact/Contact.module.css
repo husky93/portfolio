@@ -1,21 +1,35 @@
 .contact {
   background-color: var(--color-bg);
   padding: 48px;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border-bottom: 2px var(--color-grey) solid;
 }
 
 .heading {
   font-family: 'Hahmlet', serif;
-  font-size: 48px;
+  font-size: 36px;
   margin: 0;
   font-weight: 900;
 }
 
 .email {
-  font-size: 32px;
+  font-size: 24px;
   margin: 0;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    min-height: 50vh;
+  }
+  .heading {
+    font-size: 48px;
+  }
+  .email {
+    font-size: 32px;
+  }
 }

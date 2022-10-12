@@ -1,0 +1,128 @@
+.wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.sphere {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  perspective: 800px;
+  margin-left: auto;
+  margin-right: 48px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  animation : rotate 25s infinite linear;
+}
+
+.item {
+  display: inline-block;
+  position: absolute;
+  top:50%;
+  left:50%;
+  perspective: 800px;
+  transform-style: preserve-3d;
+}
+
+.item svg {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: calc(50% - 2px);
+  animation: invertRotate 25s infinite linear;
+}
+
+.container .item:nth-child(1) {
+  transform: translate3d(-130px, 0px, -120px);
+}
+
+
+.container .item:nth-child(2) {
+  transform: translate3d(60px, 60px, -60px);
+}
+
+
+.container .item:nth-child(3) {
+  transform: translate3d(-60px, -60px, -60px);
+}
+
+
+.container .item:nth-child(4) {
+  transform: translate3d(-60px, 0, 45px);
+}
+
+
+.container .item:nth-child(5) {
+  transform: translate3d(90px, -40px, -100px);
+}
+
+
+.container .item:nth-child(6) {
+  transform: translate3d(90px, 40px, 10px);
+}
+
+
+.container .item:nth-child(7) {
+  transform: translate3d(-60px, 0, -60px);
+}
+
+
+.container .item:nth-child(8) {
+  transform: translate3d(-60px, -60px, 90px);
+}
+
+
+.container .item:nth-child(9) {
+  transform: translate3d(60px, 90px, 90px);
+}
+
+.container .item:nth-child(10) {
+  transform: translate3d(0px, 80px, -60px);
+}
+
+.container .item:nth-child(11) {
+  transform: translate3d(-120px, 120px, 0px);
+}
+
+.container .item:nth-child(12) {
+  transform: translate3d(60px, 120px, -120px);
+}
+
+.container .item:nth-child(13) {
+  transform: translate3d(60px, -90px, 90px);
+}
+
+.container .item:nth-child(14) {
+  transform: translate3d(-60px, -80px, -120px);
+}
+
+.container .item:nth-child(15) {
+  transform: translate3d(-120px, 60px, 120px);
+}
+
+.container .item:nth-child(16) {
+  transform: translate3d(-120px, 0px, 80px);
+}
+
+.container .item:nth-child(17) {
+  transform: translate3d(-120px, 75px, -160px);
+}
+
+
+@keyframes rotate{
+  to{
+    transform:rotateY(360deg)
+  }
+}
+
+@keyframes invertRotate{
+  to{
+    transform:rotateY(-360deg);
+  }
+}

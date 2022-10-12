@@ -1,7 +1,7 @@
 .skills {
   position: relative;
+  border-top: 2px var(--color-grey) solid;
   padding: 48px;
-  background-color: var(--color-bg);
   min-height: 50vh;
   display: flex;
   flex-direction: column;

@@ -1,14 +1,14 @@
 .about {
   position: relative;
-  padding: 0 48px;
+  padding: 24px 48px;
   transition: background-color .2s ease, color .2s ease;
-  background-color: var(--color-bg);
-  min-height: 100vh;
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 10;
+  border-top: 2px var(--color-grey) solid;
 }
 
 .content {

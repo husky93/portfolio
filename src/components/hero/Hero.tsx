@@ -1,5 +1,4 @@
-import React, { lazy, MutableRefObject, useEffect } from 'react';
-import { useObserver } from '../../app/hooks';
+import React, { lazy } from 'react';
 import styles from '../../assets/styles/hero/Hero.module.css';
 
 const HeroBackground = lazy(() => import('./HeroBackground'));
@@ -9,22 +8,8 @@ const AlternatingText = lazy(() => import('./AlternatingText'));
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
-  const { isVisible, containerRef } = useObserver(0.001);
-
-  useEffect(() => {
-    const htmlElement = document.firstElementChild;
-    if (isVisible) {
-      htmlElement?.classList.add('dark');
-      htmlElement?.classList.remove('light');
-    }
-    if (!isVisible) {
-      htmlElement?.classList.remove('dark');
-      htmlElement?.classList.add('light');
-    }
-  }, [isVisible]);
-
   return (
-    <section className={`${styles.hero} dark`} ref={containerRef}>
+    <section className={styles.hero}>
       <HeroBackground />
       <div className={styles.content}>
         <h1>
@@ -35,7 +20,6 @@ const Hero: React.FC<HeroProps> = () => {
           text={['Frontend Developer', 'JavaScript', 'TypeScript', 'React']}
         />
       </div>
-      <div ref={containerRef} style={{ height: '1px' }}></div>
     </section>
   );
 };

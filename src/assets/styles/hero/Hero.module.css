@@ -1,8 +1,7 @@
 .hero {
   position: relative;
   height: 100vh;
-  background-color: #010400;
-  color: #FFFBFC;
+  background-color: var(--color-bg);
 }
 
 .content {

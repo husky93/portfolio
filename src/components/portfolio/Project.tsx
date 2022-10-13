@@ -50,16 +50,22 @@ const Project: React.FC<ProjectProps> = ({
     return <Image alt="" imgName={imageName} />;
   };
 
-  const setTransform = (position: 'left' | 'right', rotation: number) => {
+  const setTransform = (position: 'left' | 'right', rotation?: number) => {
     const offsetRotation =
-      rotation + rotation * ((2 * offset) / windowHeight.current);
-    return isVisible && imagePosition === position
-      ? {
-          transform: `translateX(0px) translateY(${
-            offset / 30
-          }px) rotate(${offsetRotation}deg)`,
-        }
-      : {};
+      rotation && rotation + rotation * ((2 * offset) / windowHeight.current);
+    if (isVisible && imagePosition === position) {
+      return {
+        transform: `translateX(0px) translateY(${offset / 30}px) ${
+          rotation ? 'rotate(' + offsetRotation + 'deg)' : ''
+        }`,
+      };
+    }
+    if (isVisible && imagePosition !== position) {
+      return {
+        transform: `translateX(0px) translateY(${offset / 60}px)`,
+      };
+    }
+    return {};
   };
 
   return (

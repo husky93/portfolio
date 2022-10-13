@@ -15,7 +15,7 @@
 }
 
 .left, .right {
-  transition: transform 250ms ease-out, opacity 650ms ease-out;
+  transition: transform 250ms ease-out, opacity 800ms ease-out;
 }
 
 .left {

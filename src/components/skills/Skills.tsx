@@ -42,7 +42,7 @@ const skillsArray: Array<SkillsObject> = [
 ];
 
 const Skills: React.FC<SkillsProps> = ({}) => {
-  const { isVisible, containerRef } = useObserver(0.35);
+  const { isVisible, containerRef } = useObserver(0.2);
 
   return (
     <section

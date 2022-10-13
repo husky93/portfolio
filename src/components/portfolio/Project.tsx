@@ -55,14 +55,14 @@ const Project: React.FC<ProjectProps> = ({
       rotation && rotation + rotation * ((2 * offset) / windowHeight.current);
     if (isVisible && imagePosition === position) {
       return {
-        transform: `translateX(0px) translateY(${offset / 30}px) ${
+        transform: `translateX(0px) translateY(${offset / 35}px) ${
           rotation ? 'rotate(' + offsetRotation + 'deg)' : ''
         }`,
       };
     }
     if (isVisible && imagePosition !== position) {
       return {
-        transform: `translateX(0px) translateY(${offset / 60}px)`,
+        transform: `translateX(0px) translateY(${-offset / 70}px)`,
       };
     }
     return {};

@@ -15,17 +15,17 @@
 }
 
 .left, .right {
-  transition: transform 500ms ease-out, opacity 600ms ease-out;
+  transition: transform 250ms ease-out, opacity 650ms ease-out;
 }
 
 .left {
   transform: translateX(-100vw);
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .right {
   transform: translateX(100vw);
-  opacity: 0.3;
+  opacity: 0;
 }
 
 .container.in_viewport .left, .container.in_viewport .right {

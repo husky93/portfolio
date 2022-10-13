@@ -33,3 +33,10 @@
     font-size: 32px;
   }
 }
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .contact {
+    min-height: 100vh;
+  }
+}
+

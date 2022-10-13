@@ -36,6 +36,7 @@
   transition: transform 500ms ease-out, opacity 600ms ease-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: var(--border-radius);
+  z-index: 15;
 }
 
 .about_text {
@@ -74,6 +75,18 @@
   }
   .desc {
     font-size: 16px;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .about {
+    padding: 48px;
+    min-height: 200vh;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .content { 
+    gap:84px;
   }
 }
 

@@ -9,12 +9,13 @@ interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
   const [margin, setMargin] = useState<Array<number>>([0, 0]);
-  const { isVisible, containerRef } = useObserver(0.9);
+  const aboutRef = useRef(null!);
+  const { isVisible, containerRef } = useObserver(0.4);
   const { offset, sectionRef, windowHeight } = useParallax();
 
   useEffect(() => {
     if (window.innerWidth >= 768) {
-      setMargin([80, 80]);
+      setMargin([0, 0]);
     }
     if (window.innerWidth < 768) {
       if (window.innerHeight > 740 && window.innerHeight < 800) {
@@ -27,6 +28,8 @@ const About: React.FC<AboutProps> = ({}) => {
         setMargin([0, -40]);
       }
     }
+    containerRef.current = aboutRef.current;
+    sectionRef.current = aboutRef.current;
   }, []);
 
   const setTransform = useCallback(
@@ -51,20 +54,19 @@ const About: React.FC<AboutProps> = ({}) => {
   );
 
   return (
-    <div>
+    <div id="about">
       <section
-        id="#about"
         aria-label="About"
         className={`${styles.about} ${isVisible ? styles.in_viewport : ''}`}
-        ref={sectionRef}
+        ref={aboutRef}
       >
         <div className={styles.content}>
-          <div className={styles.left} style={setTransform(margin[0], 8, -2)}>
+          <div className={styles.left} style={setTransform(margin[0], 8, -1)}>
             <Curtain direction="left" startAnimation={isVisible} delay={500}>
               <Image alt="Placeholder" imgName="placeholder" />
             </Curtain>
           </div>
-          <div className={styles.right} style={setTransform(margin[1], 15)}>
+          <div className={styles.right} style={setTransform(margin[1], 20)}>
             <Curtain direction="right" startAnimation={isVisible} delay={1000}>
               <div className={styles.about_text}>
                 <h2 className={`${styles.heading} h2`}>About Me</h2>
@@ -83,7 +85,6 @@ const About: React.FC<AboutProps> = ({}) => {
           </div>
         </div>
       </section>
-      <div className={styles.observer} ref={containerRef}></div>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { lazy, useRef, useEffect } from 'react';
 import { useParallax, useObserver } from '../../app/hooks';
 import styles from '../../assets/styles/portfolio/Project.module.css';
 
@@ -24,8 +24,14 @@ const Project: React.FC<ProjectProps> = ({
   ghLink,
   liveLink,
 }) => {
-  const { containerRef, isVisible } = useObserver(1);
+  const { containerRef, isVisible } = useObserver(0.4);
   const { sectionRef, offset, windowHeight } = useParallax();
+  const projectRef = useRef(null!);
+
+  useEffect(() => {
+    containerRef.current = projectRef.current;
+    sectionRef.current = projectRef.current;
+  }, []);
 
   const renderDetails = () => {
     return (
@@ -50,7 +56,7 @@ const Project: React.FC<ProjectProps> = ({
     return isVisible && imagePosition === position
       ? {
           transform: `translateX(0px) translateY(${
-            offset / 25
+            offset / 30
           }px) rotate(${offsetRotation}deg)`,
         }
       : {};
@@ -59,7 +65,7 @@ const Project: React.FC<ProjectProps> = ({
   return (
     <div
       className={`${styles.container} ${isVisible ? styles.in_viewport : ''}`}
-      ref={sectionRef}
+      ref={projectRef}
     >
       <div
         className={`${styles.left} ${
@@ -69,7 +75,6 @@ const Project: React.FC<ProjectProps> = ({
       >
         {imagePosition === 'left' ? renderImage() : renderDetails()}
       </div>
-      <div ref={containerRef}></div>
       <div
         className={`${styles.right} ${
           imagePosition === 'right' ? styles.image : ''

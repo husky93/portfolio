@@ -4,17 +4,17 @@
   align-items: center;
 }
 .sphere {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   position: relative;
   perspective: 800px;
-  margin-left: auto;
-  margin-right: 48px;
+  margin-top: auto;
+  margin-right: 128px;
 }
 
 .container {
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   transform-style: preserve-3d;
   animation : rotate 25s infinite linear;
 }
@@ -126,5 +126,21 @@
 @keyframes invertRotate{
   to{
     transform:rotateY(-360deg);
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .sphere {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sphere {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: 48px;
   }
 }

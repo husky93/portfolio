@@ -1,8 +1,8 @@
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 84px;
   position: relative;
+  background-color: var(--color-grey);
 }
 
 
@@ -10,33 +10,39 @@
   display: flex;
   flex-direction: column;
   gap: 84px;
-  padding: 18px;
+  padding: 18px 18px 64px 18px;
+  position: relative;
 }
+
+.content::after {
+  content: url(../../icons/rough-edges-bottom.svg);
+  color: var(--color-grey);
+  fill: var(--color-grey);
+  width: 100%;
+  position: absolute;
+  bottom: -5px;
+  z-index: 15;
+  left: 0;
+} 
+
 
 .viewmore {
   position: relative;
   padding: 48px 0 64px 0;
   display: flex;
   justify-content: center;
-}
-
-.viewmore::after, .viewmore::before, .projects::before {
-  content: url(../../icons/separator.svg);
-  color: var(--color-grey);
-  fill: var(--color-grey);
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 25px;
-  position: absolute;
+  background-color: var(--color-bg);
 }
 
 .viewmore::after {
-  bottom: 0;
-  left: 0;
-}
-
-.viewmore::before, .projects::before {
-  top: 0;
+  content: url(../../icons/rough-edges-top.svg);
+  color: var(--color-grey);
+  fill: var(--color-grey);
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: -100px;
+  z-index: 15;
   left: 0;
 }
 
@@ -48,6 +54,6 @@
 
 @media screen and (min-width: 768px) {
   .content {
-    padding: 48px;
+    padding: 48px 48px 128px 48px;
   }
 }

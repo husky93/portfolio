@@ -2,24 +2,13 @@
   position: relative;
   padding: 24px 48px;
   transition: background-color .2s ease, color .2s ease;
-  min-height: 65vh;
+  min-height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 10;
-}
-
-.about::before {
-  content: url(../../icons/separator.svg);
-  color: var(--color-grey);
-  fill: var(--color-grey);
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-color: var(--color-grey)
 }
 
 .content {
@@ -78,6 +67,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .about {
+    min-height: 75vh;
+  }
   .content {
     flex-direction: row;
   }

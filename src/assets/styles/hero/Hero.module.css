@@ -1,6 +1,18 @@
 .hero {
   position: relative;
-  height: 100vh;
+  height: 110vh;
+}
+
+.hero::after {
+  content: url(../../icons/slant-top.svg);
+  color: var(--color-grey);
+  fill: var(--color-grey);
+  width: 100%;
+  height: 125px;
+  position: absolute;
+  bottom: -125px;
+  left: 0;
+  z-index: 15;
 }
 
 .content {

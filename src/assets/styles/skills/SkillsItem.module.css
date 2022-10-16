@@ -63,8 +63,8 @@
 }
 
 .item:hover::after {
-  border-left-color: var(--color-grey);
-  border-top-color: var(--color-grey);
+  border-left-color: var(--color-dark);
+  border-top-color: var(--color-dark);
   transition:
   height 0.2s ease-out,
   width 0.2s ease-out 0.2s;
@@ -72,8 +72,8 @@
 }
 
 .item:hover::before {
-  border-bottom-color: var(--color-grey);
-  border-right-color: var(--color-grey);
+  border-bottom-color: var(--color-dark);
+  border-right-color: var(--color-dark);
   transition:
     width 0.2s ease-out,
     height 0.2s ease-out 0.2s;

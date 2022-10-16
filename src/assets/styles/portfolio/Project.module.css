@@ -23,6 +23,8 @@
 .left:not(.image), .right:not(.image) {
   flex: 1;
   background-color: var(--color-bg);
+  border: 1px var(--color-dark) solid;
+  border-radius: var(--border-radius);
 }
 
 .left, .right {

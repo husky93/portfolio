@@ -28,6 +28,20 @@
   justify-content: center;
 }
 
+.introduction {
+  margin: 0;
+}
+
+.header {
+  margin: 0;
+}
+
+@media screen and (min-height: 840px) and (max-width: 595px) {
+  .hero {
+    height: 90vh;
+  }  
+}
+
 @media screen and (max-height: 925px) and (max-width: 595px) {
   .content {
     justify-content: flex-start;
@@ -48,6 +62,13 @@
     height: 75vh;
   }
   .content {
-    padding: 128px;
+    justify-content: center;
+    padding: 0 64px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    padding: 0 128px;
   }
 }

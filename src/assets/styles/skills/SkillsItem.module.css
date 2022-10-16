@@ -12,7 +12,7 @@
 
 .icon {
   z-index: 11;
-  background-color: var(--color-bg);
+  background-color: var(--color-grey);
 }
 
 .title {
@@ -75,6 +75,11 @@
 
 .item:hover {
   box-shadow: var(--box-shadow-sm);
+  background-color: var(--color-bg);
+}
+
+.item:hover .icon {
+  background-color: var(--color-bg);
 }
 
 .item:hover .title {

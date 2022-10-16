@@ -44,6 +44,10 @@
   animation-name: from-right;
 }
 
+.hamburger.active .line {
+  fill: var(--color-bg);
+}
+
 .hamburger.active .line:nth-of-type(1) {
   animation-name: go-left;
 }

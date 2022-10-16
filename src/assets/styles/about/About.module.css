@@ -31,6 +31,7 @@
 }
 
 .content .right {
+  background-color: var(--color-bg);
   opacity: 0.5;
   transform: translateX(100vw);
   transition: transform 500ms ease-out, opacity 600ms ease-out;
@@ -44,6 +45,7 @@
 }
 
 .desc {
+  color: var(--color-text-light);
   font-size: 14px;
   font-weight: 300;
 }

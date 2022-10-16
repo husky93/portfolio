@@ -63,7 +63,11 @@ const About: React.FC<AboutProps> = ({}) => {
         <div className={styles.content}>
           <div className={styles.left} style={setTransform(margin[0], 8, -1)}>
             <Curtain direction="left" startAnimation={isVisible} delay={500}>
-              <Image alt="Placeholder" imgName="placeholder" />
+              <Image
+                alt="Placeholder"
+                imgName="placeholder"
+                blurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
+              />
             </Curtain>
           </div>
           <div className={styles.right} style={setTransform(margin[1], 20)}>

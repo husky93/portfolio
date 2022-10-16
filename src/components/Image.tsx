@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { Blurhash } from 'react-blurhash';
 
 interface ImageProps {
   alt: string;
   imgName: string;
+  blurHash: string;
 }
 
-const ImageComponent: React.FC<ImageProps> = ({ alt, imgName }) => {
+const ImageComponent: React.FC<ImageProps> = ({ alt, imgName, blurHash }) => {
   const [imgSrc, setImgSrc] = useState<string | undefined>(undefined);
   const [loading, setLoading] = useState(true);
 
@@ -31,6 +33,8 @@ const ImageComponent: React.FC<ImageProps> = ({ alt, imgName }) => {
 
     loadImage();
   }, [imgName]);
+
+  if (loading) return <Blurhash hash={blurHash} width={300} height={300} />;
 
   return (
     <img

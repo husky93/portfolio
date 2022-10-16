@@ -29,6 +29,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           title="Portfolio"
           description="This is a website you're on right now! The goal was to make an interactive, accessible portfolio website with good performance. Something caught your attention? See how I programmed it by clicking Code button below!"
           imageName="placeholder"
+          imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
           imagePosition="left"
           ghLink="https://github.com/husky93/portfolio"
         >
@@ -48,7 +49,8 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         <Project
           title="Social Blogging Platform"
           description="Social Blogging Platform based on websites like medium.com and dev.to. The goal was to program as much of core functionality of such platform in a limited time. You can login, add new posts, comment, bookmark and like them. For full list of features you can read project documentation by clicking Code button below."
-          imageName="placeholder"
+          imageName="blog"
+          imageBlurHash="L3SigR^+%h_Mx[j^9F9Z_1%MRhD%"
           imagePosition="right"
           ghLink="https://github.com/husky93/social-blogging-platform"
           liveLink="https://husky93.github.io/social-blogging-platform/"
@@ -75,7 +77,8 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         <Project
           title="Where's Waldo Game"
           description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your score! The goal of this project was to learn more about TDD with React and find out more about frontend connection with backend"
-          imageName="placeholder"
+          imageName="waldo"
+          imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
           imagePosition="left"
           ghLink="https://github.com/husky93/photo-tagging-app"
           liveLink="https://husky93.github.io/photo-tagging-app/"
@@ -102,7 +105,8 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         <Project
           title="Store Frontend"
           description="Interactive Frontend of a Store coded with use of React library and Test-Driven-Development methodology. Goal was to get used with routing in React and practice React components interactions as well as responsive styling."
-          imageName="placeholder"
+          imageName="store"
+          imageBlurHash="L2QJfm000000o|t7.8tRxbpG~Xx["
           imagePosition="right"
           ghLink="https://github.com/husky93/storefront"
           liveLink="https://husky93.github.io/storefront/"
@@ -123,7 +127,8 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         <Project
           title="Battleships Game"
           description="A Battleships game web application written fully in JavaScript with use of Test-Driven-Development methodology and OOP principles. Place your ships and play against an advanced AI that chooses which tile to hit based on already hit ship tiles. The goal of this project was to show my vanilla JS skills."
-          imageName="placeholder"
+          imageName="battleships"
+          imageBlurHash="L66*X=oa$;xBo#W-S5oL4,a}StR."
           imagePosition="left"
           ghLink="https://github.com/husky93/battleship-game"
           liveLink="https://husky93.github.io/battleship-game/"

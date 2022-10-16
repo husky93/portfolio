@@ -8,6 +8,7 @@ const Image = lazy(() => import('../Image'));
 interface ProjectProps {
   imagePosition: 'left' | 'right';
   imageName: string;
+  imageBlurHash: string;
   children: React.ReactNode;
   title: string;
   description: string;
@@ -19,6 +20,7 @@ const Project: React.FC<ProjectProps> = ({
   children,
   imagePosition,
   imageName,
+  imageBlurHash,
   title,
   description,
   ghLink,
@@ -47,7 +49,7 @@ const Project: React.FC<ProjectProps> = ({
     );
   };
   const renderImage = () => {
-    return <Image alt="" imgName={imageName} />;
+    return <Image alt="" imgName={imageName} blurHash={imageBlurHash} />;
   };
 
   const setTransform = (position: 'left' | 'right', rotation?: number) => {

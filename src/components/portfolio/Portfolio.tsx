@@ -76,7 +76,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         </Project>
         <Project
           title="Where's Waldo Game"
-          description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your score! The goal of this project was to learn more about TDD with React and find out more about frontend connection with backend"
+          description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your score! The goal of this project was to learn more about TDD with React and about client-server interaction"
           imageName="waldo"
           imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
           imagePosition="left"
@@ -126,7 +126,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         </Project>
         <Project
           title="Battleships Game"
-          description="A Battleships game web application written fully in JavaScript with use of Test-Driven-Development methodology and OOP principles. Place your ships and play against an advanced AI that chooses which tile to hit based on already hit ship tiles. The goal of this project was to show my vanilla JS skills."
+          description="A Battleships game web application written fully in “vanilla” JavaScript with use of Test-Driven-Development methodology and OOP principles. Place your ships and play against an advanced AI that chooses which tile to hit based on already hit ship tiles."
           imageName="battleships"
           imageBlurHash="L66*X=oa$;xBo#W-S5oL4,a}StR."
           imagePosition="left"
@@ -134,7 +134,8 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           liveLink="https://husky93.github.io/battleship-game/"
         >
           <Badge>
-            <JsIcon /> Vanilla JavaScript
+            <JsIcon />
+            JavaScript
           </Badge>
           <Badge>
             <WebpackIcon /> webpack

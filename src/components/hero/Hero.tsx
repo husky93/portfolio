@@ -12,7 +12,8 @@ const Hero: React.FC<HeroProps> = () => {
     <section className={styles.hero} id="hero">
       <HeroBackground />
       <div className={styles.content}>
-        <h1>
+        <p className={styles.introduction}>Hi, my name is</p>
+        <h1 className={styles.header}>
           <AnimatedHeading text="Maciej" />
           <AnimatedHeading text="Sroka" />
         </h1>

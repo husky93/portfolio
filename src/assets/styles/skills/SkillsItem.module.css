@@ -1,4 +1,5 @@
 .item {
+  will-change: background-color, box-shadow;
   position: relative;
   padding: 18px 24px;
   max-width: 124px;
@@ -6,21 +7,26 @@
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  transition: color 0.2s 0s, box-shadow 0.30s 0s;
+  transition: background-color 0.3s 0s, box-shadow 0.3s 0s;
   border-radius: var(--border-radius);
+  z-index: 13;
 }
 
 .icon {
-  z-index: 11;
   background-color: var(--color-grey);
+  position: relative;
+  z-index: 12;
+  transition: background-color 0.3s 0s;
 }
 
 .title {
+  will-change: transform, opacity;
   transition: transform 250ms, opacity 350ms;
   transform: translateY(-42px);
   font-weight: 600;
+  position: relative;
+  z-index: 11;
   opacity: 0;
-  z-index: 10;
   font-size: 15px;
   color: var(--color-primary);
 
@@ -28,6 +34,7 @@
 
 .item::before,
 .item::after {
+  will-change: width, height;
   box-sizing: inherit;
   content: '';
   position: absolute;

@@ -26,6 +26,7 @@
 }
 
 .left, .right {
+  will-change: transform;
   transition: transform 250ms ease-out, opacity 800ms ease-out;
 }
 

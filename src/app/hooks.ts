@@ -47,7 +47,7 @@ export const useParallax = (): ParallaxObject => {
     window.addEventListener('scroll', onScroll, { passive: true });
 
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [sectionRef.current]);
 
   return { offset, windowHeight, sectionRef };
 };

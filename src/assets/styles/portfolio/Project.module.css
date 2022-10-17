@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 48px;
 }
 
 .image {
@@ -25,6 +25,11 @@
   background-color: var(--color-bg);
   border: 1px var(--color-dark) solid;
   border-radius: var(--border-radius);
+  order: 2;
+}
+
+.left.image, .right.image {
+  order: 1;
 }
 
 .left, .right {
@@ -47,8 +52,16 @@
   opacity: 1;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 889px) {
   .container {
     flex-direction: row;
+  }
+
+  .left.image, .right.image {
+    order: unset;
+  }
+
+  .left:not(.image), .right:not(.image) {
+    order: unset;
   }
 }

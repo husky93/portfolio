@@ -1,8 +1,4 @@
 :root {
-  --screen-sm: 595px;
-  --screen-md: 768px;
-  --screen-lg: 889px;
-  --screen-xl: 1200px;
   --box-shadow-sm: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   --box-shadow-lg: 0 24px 43px rgb(25 17 34 / 20%), 0 20px 17px rgb(25 17 34 / 20%);
   --border-radius: 0.25rem;

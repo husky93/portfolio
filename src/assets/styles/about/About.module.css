@@ -1,7 +1,7 @@
 .about {
   position: relative;
   padding: 24px 48px;
-  min-height: 120vh;
+  min-height: 130vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,7 +13,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 84px;
   align-items: center;
 }
 
@@ -64,19 +64,8 @@
 
 }
 
-@media screen and (max-height: 700px) {
-  .content {
-    gap: 8px;
-  }
-}
 
 @media screen and (min-width: 768px) {
-  .about {
-    min-height: 75vh;
-  }
-  .content {
-    flex-direction: row;
-  }
   .about_text {
     padding: 24px;
   }
@@ -85,11 +74,21 @@
   }
 }
 
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+@media screen and (min-width: 889px) {
+  .about {
+    min-height: 75vh;
+  }
+  .content {
+    flex-direction: row;
+    gap: 48px;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: 500px)  {
   .about {
     padding: 48px;
     min-height: 200vh;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
   .content { 

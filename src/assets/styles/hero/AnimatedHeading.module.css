@@ -1,24 +1,18 @@
 .container {
   position: relative;
   overflow: hidden;
+  text-align: left;
 }
 
 .heading {
   font-family: 'Hahmlet', serif;
   transform: translate(100px, 200%) rotate(25deg);
   display: inline-block;
-  font-size: 72px;
+  font-size: 64px;
   transform-origin: 0 50%;
   animation: animate 675ms;
   animation-fill-mode: forwards;
   font-weight: 900;
-  text-align: center;
-}
-
-@media screen and (min-width: 768px) {
-  .heading {
-    font-size: 92px;
-  }
 }
 
 @keyframes animate {
@@ -30,5 +24,29 @@
   100% {
     transform: translate(0px, 0%);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    text-align: center;
+  }
+  .heading {
+    font-size: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    text-align: left;
+  }
+  .heading {
+    font-size: 92px;
+  }
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: 500px) {
+  .container {
+    text-align: left;
   }
 }

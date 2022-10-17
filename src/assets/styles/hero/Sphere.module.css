@@ -11,8 +11,9 @@
   height: 400px;
   position: relative;
   margin-top: 40vh;
-  margin-right: 128px;
+  margin-right: auto;
   margin-bottom: 64px;
+  margin-left: auto;
   transform-style: preserve-3d;
 }
 
@@ -135,7 +136,7 @@
   }
 }
 
-@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: 500px)  {
   .sphere {
     margin-top: 0;
     margin-left: auto;

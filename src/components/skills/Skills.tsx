@@ -29,7 +29,6 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <HtmlIcon />, title: 'HTML' },
   { icon: <CssIcon />, title: 'CSS' },
   { icon: <GitIcon />, title: 'GIT' },
-  { icon: <NpmIcon />, title: 'NPM' },
   { icon: <ReduxIcon />, title: 'Redux' },
   { icon: <JestIcon />, title: 'Jest' },
   { icon: <TestingIcon />, title: 'testing-library' },
@@ -37,6 +36,7 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <TailwindIcon />, title: 'Tailwind CSS' },
   { icon: <SassIcon />, title: 'Sass' },
   { icon: <WebpackIcon />, title: 'Webpack' },
+  { icon: <NpmIcon />, title: 'NPM' },
   { icon: <ViteIcon />, title: 'Vite' },
   { icon: <NextIcon />, title: 'Next.js' },
 ];

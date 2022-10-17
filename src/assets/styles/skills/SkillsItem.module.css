@@ -13,7 +13,7 @@
 }
 
 .icon {
-  background-color: var(--color-grey);
+  background-color: transparent;
   position: relative;
   z-index: 12;
   transition: background-color 0.3s 0s;

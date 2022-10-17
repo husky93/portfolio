@@ -6,18 +6,28 @@
   margin: 0 auto;
 }
 
+
 .main {
   position: relative;
   width: 100%;
   transition: all 300ms;
-  z-index: 5;
+  z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 6px -1px, rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
   overflow: hidden;
   background-color: var(--color-bg);
 }
 
 .active {
-  perspective: 0px;
   transform: perspective(100vh) translate3d(0px, 0px, -5vh);
 }
 
+@-moz-document url-prefix() { 
+  @media screen and (min-height: 768px) {
+    .active {
+      transform: translate3d(0px, 150px, -5vh);
+    }
+  }
+  .active {
+    transform: translate3d(0px, 150px, -5vh);
+  }
+}

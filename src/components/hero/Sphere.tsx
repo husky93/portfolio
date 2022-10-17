@@ -50,8 +50,11 @@ const Sphere: React.FC<SphereProps> = ({}) => {
     <div className={styles.wrapper}>
       <div className={styles.sphere}>
         <div className={styles.container}>
-          {iconArray.map((item) => (
-            <div className={`${styles.item} ${active ? styles.active : ''}`}>
+          {iconArray.map((item, i) => (
+            <div
+              className={`${styles.item} ${active ? styles.active : ''}`}
+              key={`sphere-item-${i}`}
+            >
               {item}
             </div>
           ))}

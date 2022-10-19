@@ -49,9 +49,9 @@ const About: React.FC<AboutProps> = ({}) => {
           <div className={styles.left} style={setTransform(0, 8, -1)}>
             <Curtain direction="left" startAnimation={isVisible} delay={500}>
               <Image
-                alt="Placeholder"
-                imgName="placeholder"
-                blurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
+                alt="Profile"
+                imgName="profile"
+                blurHash="LHB|QS~V.I^*xBR%E2RiW9xu%Nog"
               />
             </Curtain>
           </div>

@@ -11,7 +11,6 @@ interface MenuProps {
 const Menu: React.FC<MenuProps> = ({ active, handleLinkClick }) => {
   return (
     <nav
-      aria-hidden={active ? 'false' : 'true'}
       aria-label="Menu"
       className={`${styles.navigation} ${active ? styles.active : ''}`}
     >

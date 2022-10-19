@@ -54,7 +54,7 @@ const Project: React.FC<ProjectProps> = ({
 
   const setTransform = (position: 'left' | 'right', rotation?: number) => {
     const offsetRotation =
-      rotation && rotation + rotation * ((2 * offset) / windowHeight.current);
+      rotation && rotation + rotation * (offset / windowHeight.current);
     if (isVisible && imagePosition === position) {
       return {
         transform: `translateX(0px) translateY(${offset / 35}px) ${

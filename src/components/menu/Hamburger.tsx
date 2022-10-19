@@ -17,7 +17,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ active, handleClick }) => {
     <div className={`${styles.hamburger} ${active ? styles.active : ''}`}>
       <button
         className={styles.toggler}
-        aria-label="Menu"
+        aria-hidden="true"
         onClick={handleClick}
       >
         <svg viewBox="0 0 80 50" width="30" height="40">

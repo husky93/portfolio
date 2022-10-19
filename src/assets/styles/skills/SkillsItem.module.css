@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 12px;
   align-items: center;
-  transition: background-color 0.3s 0s, box-shadow 0.3s 0s;
+  transition: background-color 0.3s 0s, box-shadow 0.3s 0s, transform 0.3s 0s;;
   border-radius: var(--border-radius);
   z-index: 13;
 }
@@ -83,6 +83,7 @@
 .item:hover {
   box-shadow: var(--box-shadow-sm);
   background-color: var(--color-bg);
+  transform: scale(1.05);
 }
 
 .item:hover .icon {

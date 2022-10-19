@@ -27,9 +27,9 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         <h2 className="h2">My Projects</h2>
         <Project
           title="Portfolio"
-          description="This is a website you're on right now! The goal was to make an interactive, accessible portfolio website with good performance. Something caught your attention? See how I programmed it by clicking Code button below!"
-          imageName="placeholder"
-          imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
+          description="This is the website you're on right now! The goal was to make an interactive, responsive portfolio website. Something caught your attention? See how I programmed it by clicking Code button below!"
+          imageName="portfolio"
+          imageBlurHash="L8Q,USITIB%M%#W;ayWB~q%2%LR."
           imagePosition="left"
           ghLink="https://github.com/husky93/portfolio"
         >
@@ -48,7 +48,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         </Project>
         <Project
           title="Social Blogging Platform"
-          description="Social Blogging Platform based on websites like medium.com and dev.to. The goal was to program as much of core functionality of such platform in a limited time. You can login, add new posts, comment, bookmark and like them. For full list of features you can read project documentation by clicking Code button below."
+          description="Social Blogging Platform inspired by medium.com and dev.to. The goal was to program as much of core functionality of such platform in a limited time. You can login, add new posts, comment, bookmark and like them. For full list of features you can read project documentation by clicking Code button below."
           imageName="blog"
           imageBlurHash="L3SigR^+%h_Mx[j^9F9Z_1%MRhD%"
           imagePosition="right"
@@ -76,7 +76,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         </Project>
         <Project
           title="Where's Waldo Game"
-          description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your score! The goal of this project was to learn more about TDD with React and about client-server interaction"
+          description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your time in a scoreboard! The goal of this project was to learn more about TDD with React and about client-server interaction"
           imageName="waldo"
           imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
           imagePosition="left"
@@ -104,7 +104,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
         </Project>
         <Project
           title="Store Frontend"
-          description="Interactive Frontend of a Store coded with use of React library and Test-Driven-Development methodology. Goal was to get used with routing in React and practice React components interactions as well as responsive styling."
+          description="Interactive Frontend of a Store coded with use of React library and Test-Driven-Development methodology. Goal of this project was to get used with routing in React and practice React functional component hooks usage as well as responsive styling and writing unit tests for React components."
           imageName="store"
           imageBlurHash="L2QJfm000000o|t7.8tRxbpG~Xx["
           imagePosition="right"

@@ -60,14 +60,47 @@ const About: React.FC<AboutProps> = ({}) => {
               <div className={styles.about_text}>
                 <h2 className={`${styles.heading} h2`}>About Me</h2>
                 <p className={styles.desc}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.
+                  Ever since I was a kid I was very tech-savvy and fascinated by
+                  <strong className={styles.highlighted}>
+                    {' '}
+                    World Wide Web{' '}
+                  </strong>
+                  and its potential. I had an internet access since it started
+                  gaining popularity in Poland (around 2001). I witnessed it
+                  transform from websites with bunch of links and text and
+                  barely any style at all to global, fast, functional, modern
+                  social media platforms we have today.
+                </p>
+                <p className={styles.desc}>
+                  My interest in{' '}
+                  <strong className={styles.highlighted}>
+                    {' '}
+                    web development{' '}
+                  </strong>
+                  started when i was around 13. Thats when I created my first
+                  website based on jPortal2 CMS. I didn't follow up on my
+                  passion back then, as it seemed very hard to do things on a
+                  web for a 13 y.o. without communities like StackOverflow and
+                  decent Google SE algorithm 😆.
+                </p>
+                <p className={styles.desc}>
+                  After many years I decided to revisit old passion of mine and
+                  learn{' '}
+                  <strong className={styles.highlighted}>
+                    computer science and programming
+                  </strong>{' '}
+                  through the internet. I got instantly hooked in and over the
+                  last few years I have gained solid knowledge of{' '}
+                  <strong className={styles.highlighted}>
+                    frontend development
+                  </strong>{' '}
+                  and programming in general. Although there is still a lot to
+                  learn I believe I can be a valuable asset to a Frontend
+                  Development team and continue my growth with a company that is
+                  willing to help me with it. So if you're looking for a
+                  motivated, willing-to-learn, developer with a solid knowledge
+                  and passion to build fast, accessible, responsive UIs - hit me
+                  up 😁!
                 </p>
               </div>
             </Curtain>

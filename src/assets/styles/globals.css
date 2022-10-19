@@ -47,13 +47,3 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: var(--color-text);
-    background: var(--color-bg);
-  }
-}

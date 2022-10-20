@@ -92,7 +92,7 @@ const About: React.FC<AboutProps> = ({}) => {
                   and programming in general. Although there is still a lot for
                   me to learn I believe I can be a valuable asset to a Frontend
                   Development team and continue my growth with a company that is
-                  willing to help me with it. So if you're looking for a
+                  willing to give me a chance. So if you're looking for a
                   motivated, willing-to-learn, developer with a solid knowledge
                   and passion to build fast, functional, accessible, responsive
                   UIs - hit me up 😁!

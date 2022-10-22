@@ -13,9 +13,9 @@
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid var(--color-primary);
+  border: 3px solid #F7AFA1;
   border-radius: 50%;
-  border-top-color: var(--color-primary-hover);
+  border-top-color: var(--color-primary);
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }

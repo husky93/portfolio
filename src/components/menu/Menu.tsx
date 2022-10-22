@@ -6,13 +6,16 @@ const MenuLink = lazy(() => import('./MenuLink'));
 interface MenuProps {
   active: boolean;
   handleLinkClick: React.MouseEventHandler<HTMLAnchorElement>;
+  isLoaded: boolean;
 }
 
-const Menu: React.FC<MenuProps> = ({ active, handleLinkClick }) => {
+const Menu: React.FC<MenuProps> = ({ active, handleLinkClick, isLoaded }) => {
   return (
     <nav
       aria-label="Menu"
-      className={`${styles.navigation} ${active ? styles.active : ''}`}
+      className={`${styles.navigation} ${active ? styles.active : ''} ${
+        isLoaded ? styles.loaded : ''
+      }`}
       aria-hidden={!active}
     >
       <ul className={styles.list} aria-hidden={!active}>

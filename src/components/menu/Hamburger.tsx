@@ -4,9 +4,14 @@ import styles from '../../assets/styles/menu/Hamburger.module.css';
 interface HamburgerProps {
   active: boolean;
   handleClick: React.MouseEventHandler<HTMLButtonElement>;
+  isLoaded: boolean;
 }
 
-const Hamburger: React.FC<HamburgerProps> = ({ active, handleClick }) => {
+const Hamburger: React.FC<HamburgerProps> = ({
+  active,
+  handleClick,
+  isLoaded,
+}) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -14,7 +19,11 @@ const Hamburger: React.FC<HamburgerProps> = ({ active, handleClick }) => {
   }, []);
 
   return (
-    <div className={`${styles.hamburger} ${active ? styles.active : ''}`}>
+    <div
+      className={`${styles.hamburger} ${active ? styles.active : ''} ${
+        isLoaded ? styles.loaded : ''
+      }`}
+    >
       <button
         className={styles.toggler}
         aria-hidden="true"

@@ -51,8 +51,16 @@ function App() {
   return (
     <Suspense fallback={<Loading />}>
       <div className={styles.container}>
-        <Hamburger active={menuActive} handleClick={toggleMenu} />
-        <Menu active={menuActive} handleLinkClick={toggleMenu} />
+        <Hamburger
+          active={menuActive}
+          handleClick={toggleMenu}
+          isLoaded={isLoaded}
+        />
+        <Menu
+          active={menuActive}
+          handleLinkClick={toggleMenu}
+          isLoaded={isLoaded}
+        />
         <main
           className={`${styles.main} ${isLoaded ? styles.rendered : ''} ${
             menuActive ? styles.active : ''

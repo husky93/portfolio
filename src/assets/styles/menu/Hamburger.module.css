@@ -1,9 +1,15 @@
 .hamburger {
+  opacity: 0;
   position: sticky;
   max-width: 1200px;
   margin: 0 auto;
   top: 36px;
   z-index: 50;
+  transition: opacity 0.25s 0.25s;
+}
+
+.hamburger.loaded {
+  opacity: 1;
 }
 
 .toggler {

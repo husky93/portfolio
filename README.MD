@@ -1,6 +1,6 @@
 # Portfolio
 
-My personal portfolio project built with [Vite](https://vitejs.dev/) with use of [React](https://github.com/facebook/react) library and [Typescript](https://www.typescriptlang.org/). The goal was to make interactive website with a lots of interesting effects.
+My personal portfolio project built with [Vite](https://vitejs.dev/) with use of [React](https://github.com/facebook/react) library and [Typescript](https://www.typescriptlang.org/). The goal was to make good performing, interactive website with a lots of interesting effects.
 
 <img src="https://github.com/husky93/portfolio/blob/main/perf.jpg?raw=true">
 

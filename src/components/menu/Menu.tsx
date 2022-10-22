@@ -13,18 +13,19 @@ const Menu: React.FC<MenuProps> = ({ active, handleLinkClick }) => {
     <nav
       aria-label="Menu"
       className={`${styles.navigation} ${active ? styles.active : ''}`}
+      aria-hidden={!active}
     >
-      <ul className={styles.list}>
-        <MenuLink to="#hero" handleClick={handleLinkClick}>
+      <ul className={styles.list} aria-hidden={!active}>
+        <MenuLink to="#hero" handleClick={handleLinkClick} active={active}>
           Home
         </MenuLink>
-        <MenuLink to="#about" handleClick={handleLinkClick}>
+        <MenuLink to="#about" handleClick={handleLinkClick} active={active}>
           About
         </MenuLink>
-        <MenuLink to="#projects" handleClick={handleLinkClick}>
+        <MenuLink to="#projects" handleClick={handleLinkClick} active={active}>
           Projects
         </MenuLink>
-        <MenuLink to="#contact" handleClick={handleLinkClick}>
+        <MenuLink to="#contact" handleClick={handleLinkClick} active={active}>
           Contact
         </MenuLink>
       </ul>

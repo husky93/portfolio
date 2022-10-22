@@ -1,4 +1,4 @@
-import { useState, Suspense, lazy } from 'react';
+import { useState, useEffect, useCallback, Suspense, lazy } from 'react';
 
 import Loading from './components/Loading';
 import styles from './assets/styles/Home.module.css';
@@ -15,6 +15,21 @@ const Footer = lazy(() => import('./components/Footer'));
 function App() {
   const [menuActive, setMenuActive] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  const handleTabKeyDown: (this: Document, ev: KeyboardEvent) => any =
+    useCallback(
+      (e) => {
+        if (menuActive && e.key === 'Tab') {
+          e.preventDefault();
+        }
+      },
+      [menuActive]
+    );
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleTabKeyDown);
+    return () => document.removeEventListener('keydown', handleTabKeyDown);
+  }, [handleTabKeyDown]);
 
   const toggleMenu: React.MouseEventHandler<
     HTMLButtonElement | HTMLAnchorElement

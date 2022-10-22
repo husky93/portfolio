@@ -2,6 +2,8 @@
 
 My personal portfolio project built with [Vite](https://vitejs.dev/) with use of [React](https://github.com/facebook/react) library and [Typescript](https://www.typescriptlang.org/). The goal was to make interactive website with a lots of interesting effects.
 
+<img src="https://github.com/husky93/portfolio/blob/main/perf.jpg?raw=true">
+
 ### Live: [click here](https://msroka.dev)
 
 ## Features
@@ -18,6 +20,7 @@ My personal portfolio project built with [Vite](https://vitejs.dev/) with use of
 - Curtain component that reveals About section content whenever it is shown.
 - Skills section items with a custom border animation on hover.
 - Portfolio section projects layout based on screen width.
+
  
 <img src="https://github.com/husky93/portfolio/blob/main/website.jpg?raw=true"/>
 

@@ -71,9 +71,9 @@ const About: React.FC<AboutProps> = ({}) => {
                     web development{' '}
                   </strong>
                   started when i was around 13. Thats when I created my first
-                  website based on jPortal2 CMS. I didn't follow up on my
-                  interest back then, as it seemed very hard to build things on
-                  a web for a 13 y.o. without communities like StackOverflow and
+                  website based on jPortal2 CMS. Unfortunately I abandoned my
+                  interest back then as it seemed very hard for 13 y.o. to build
+                  things on a web without communities like StackOverflow and
                   decent Google SE algorithm 😆.
                 </p>
 
@@ -91,11 +91,11 @@ const About: React.FC<AboutProps> = ({}) => {
                   </strong>{' '}
                   and programming in general. Although there is still a lot for
                   me to learn I believe I can be a valuable asset to a Frontend
-                  Development team and continue my growth with a company that is
-                  willing to give me a chance. So if you're looking for a
-                  motivated, willing-to-learn, developer with a solid knowledge
-                  and passion to build fast, functional, accessible, responsive
-                  UIs - hit me up 😁!
+                  Development team and continue my growth working on real world
+                  projects. So if you're looking for a motivated,
+                  willing-to-learn, developer with a solid knowledge and passion
+                  to build fast, functional, accessible, responsive UIs - hit me
+                  up 😁!
                 </p>
               </div>
             </Curtain>

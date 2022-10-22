@@ -1,4 +1,4 @@
-# Social Blogging Platform
+# Portfolio
 
 My personal portfolio project built with [Vite](https://vitejs.dev/) with use of [React](https://github.com/facebook/react) library and [Typescript](https://www.typescriptlang.org/). The goal was to make interactive website with a lots of interesting effects.
 

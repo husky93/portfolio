@@ -5,16 +5,9 @@ interface LoadingProps {}
 
 const Loading: React.FC<LoadingProps> = ({}) => {
   return (
-    <div className={styles.base}>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
-      <div className={styles.cube}></div>
+    <div className={styles.container}>
+      <div className={styles.loading}></div>
+      Loading
     </div>
   );
 };

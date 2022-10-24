@@ -34,7 +34,7 @@
   left: 50%;
   transform-style: preserve-3d;
   transform: translate3d(0px, 0px, 0px);
-  transition: transform 500ms;
+  transition: transform 500ms 100ms;
 }
 
 .item svg {

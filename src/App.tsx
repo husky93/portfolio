@@ -56,11 +56,7 @@ function App() {
           handleClick={toggleMenu}
           isLoaded={isLoaded}
         />
-        <Menu
-          active={menuActive}
-          handleLinkClick={toggleMenu}
-          isLoaded={isLoaded}
-        />
+        <Menu active={menuActive} toggleMenu={toggleMenu} isLoaded={isLoaded} />
         <main
           className={`${styles.main} ${isLoaded ? styles.rendered : ''} ${
             menuActive ? styles.active : ''

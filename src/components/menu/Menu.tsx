@@ -5,11 +5,11 @@ const MenuLink = lazy(() => import('./MenuLink'));
 
 interface MenuProps {
   active: boolean;
-  handleLinkClick: React.MouseEventHandler<HTMLAnchorElement>;
+  toggleMenu: React.MouseEventHandler<HTMLAnchorElement>;
   isLoaded: boolean;
 }
 
-const Menu: React.FC<MenuProps> = ({ active, handleLinkClick, isLoaded }) => {
+const Menu: React.FC<MenuProps> = ({ active, toggleMenu, isLoaded }) => {
   return (
     <nav
       aria-label="Menu"
@@ -19,16 +19,16 @@ const Menu: React.FC<MenuProps> = ({ active, handleLinkClick, isLoaded }) => {
       aria-hidden={!active}
     >
       <ul className={styles.list} aria-hidden={!active}>
-        <MenuLink to="#hero" handleClick={handleLinkClick} active={active}>
+        <MenuLink to="#hero" toggleMenu={toggleMenu} active={active}>
           Home
         </MenuLink>
-        <MenuLink to="#about" handleClick={handleLinkClick} active={active}>
+        <MenuLink to="#about" toggleMenu={toggleMenu} active={active}>
           About
         </MenuLink>
-        <MenuLink to="#projects" handleClick={handleLinkClick} active={active}>
+        <MenuLink to="#projects" toggleMenu={toggleMenu} active={active}>
           Projects
         </MenuLink>
-        <MenuLink to="#contact" handleClick={handleLinkClick} active={active}>
+        <MenuLink to="#contact" toggleMenu={toggleMenu} active={active}>
           Contact
         </MenuLink>
       </ul>

@@ -7,7 +7,6 @@ const Loading: React.FC<LoadingProps> = ({}) => {
   return (
     <div className={styles.container}>
       <div className={styles.loading}></div>
-      Loading
     </div>
   );
 };

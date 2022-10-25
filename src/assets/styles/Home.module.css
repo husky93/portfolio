@@ -28,12 +28,13 @@
 }
 
 @-moz-document url-prefix() { 
-  @media screen and (min-height: 768px) {
-    .active {
-      transform: translate3d(0px, 150px, -5vh);
-    }
-  }
   .active {
     transform: translate3d(0px, 150px, -5vh);
   }
+  @media screen and (min-width: 768px) {
+    .active {
+      transform: translate3d(0px, 120px, -5vh);
+    }
+  }
+
 }

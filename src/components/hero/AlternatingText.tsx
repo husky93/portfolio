@@ -3,7 +3,6 @@ import styles from '../../assets/styles/hero/AlternatingText.module.css';
 
 interface AlternatingTextProps {
   text: Array<string>;
-  loaded: boolean;
 }
 
 const AlternatingText: React.FC<AlternatingTextProps> = ({ text }) => {

@@ -10,7 +10,7 @@
   display: inline-block;
   font-size: 64px;
   transform-origin: 0 50%;
-  animation: animate 675ms;
+  animation: animate 700ms 500ms;
   animation-fill-mode: forwards;
   font-weight: 900;
 }

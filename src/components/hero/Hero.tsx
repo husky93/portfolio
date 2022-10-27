@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React, { lazy, useState, useEffect } from 'react';
 import styles from '../../assets/styles/hero/Hero.module.css';
 
 const HeroBackground = lazy(() => import('./HeroBackground'));
@@ -8,11 +8,19 @@ const AlternatingText = lazy(() => import('./AlternatingText'));
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 100);
+  }, []);
+
   return (
     <section className={styles.hero} id="hero">
       <HeroBackground />
       <div className={styles.content}>
-        <p className={styles.introduction}>Hi, my name is</p>
+        <p className={`${styles.introduction} ${loaded ? styles.loaded : ''}`}>
+          Hi, my name is
+        </p>
         <h1 className={styles.header}>
           <AnimatedHeading text="Maciej" />
           <AnimatedHeading text="Sroka" />

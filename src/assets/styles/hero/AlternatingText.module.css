@@ -9,7 +9,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: blur(8px);
-    opacity: .8;
+    opacity: 0;
     overflow-x: hidden;
     position: absolute;
     text-overflow: unset;
@@ -21,10 +21,19 @@
 }
 
 .active {
-    filter: none;
-    opacity: 1;
+    filter: blur(8px);
     transition: width .32s ease,opacity .32s ease-out,filter .2s ease-out;
     width: 100%
+}
+
+.text.loaded {
+  opacity: .8;
+}
+
+.active.loaded {
+  filter: none;
+  opacity: 1;
+
 }
 
 @media screen and (min-width: 480px) {

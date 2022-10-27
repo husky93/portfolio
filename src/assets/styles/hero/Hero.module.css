@@ -30,8 +30,14 @@
 }
 
 .introduction {
+  opacity: 0;
   margin: 0;
   font-weight: 500;
+  transition: opacity .32s ease-in;
+}
+
+.introduction.loaded {
+  opacity: 1;
 }
 
 .header {

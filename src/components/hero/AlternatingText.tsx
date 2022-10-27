@@ -3,12 +3,18 @@ import styles from '../../assets/styles/hero/AlternatingText.module.css';
 
 interface AlternatingTextProps {
   text: Array<string>;
+  loaded: boolean;
 }
 
 const AlternatingText: React.FC<AlternatingTextProps> = ({ text }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [active, setActive] = useState(false);
   const isFirstCycle = useRef(true);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 1500);
+  }, []);
 
   useEffect(() => {
     const textArrayLength = text.length;
@@ -32,7 +38,11 @@ const AlternatingText: React.FC<AlternatingTextProps> = ({ text }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={`${styles.text} ${active ? styles.active : ''}`}>
+      <h1
+        className={`${styles.text} ${active ? styles.active : ''} ${
+          loaded ? styles.loaded : ''
+        }`}
+      >
         {text[currentIndex]}
       </h1>
     </div>

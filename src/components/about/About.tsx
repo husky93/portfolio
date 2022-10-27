@@ -71,10 +71,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     web development{' '}
                   </strong>
                   started when i was around 13. Thats when I created my first
-                  website based on jPortal2 CMS. Unfortunately I abandoned my
-                  interest back then as it seemed very hard for 13 y.o. to build
-                  things on a web without communities like StackOverflow and
-                  decent Google SE algorithm 😆.
+                  website based on jPortal2 CMS.
                 </p>
 
                 <p className={styles.desc}>

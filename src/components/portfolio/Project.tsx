@@ -64,7 +64,7 @@ const Project: React.FC<ProjectProps> = ({
     }
     if (isVisible && imagePosition !== position) {
       return {
-        transform: `translateX(0px) translateY(${-offset / 70}px)`,
+        transform: `translateX(0px) translateY(0px)`,
       };
     }
     return {};

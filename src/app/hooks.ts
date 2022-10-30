@@ -7,7 +7,7 @@ export const useObserver = (threshold: number): ObserverObject => {
 
   const handleIntersection: IntersectionObserverCallback = (entries) => {
     const [entry] = entries;
-    setIsVisible(entry.isIntersecting);
+    if (!isVisible && entry.isIntersecting) setIsVisible(true);
   };
 
   const options: IntersectionObserverInit = {

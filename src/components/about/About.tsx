@@ -26,7 +26,7 @@ const About: React.FC<AboutProps> = ({}) => {
       let offsetRotation;
       if (rotation)
         offsetRotation =
-          rotation + rotation * -((2 * offset) / windowHeight.current);
+          rotation + rotation * -((1.75 * offset) / windowHeight.current);
       return isVisible
         ? {
             transform: `translateX(0px) translateY(${

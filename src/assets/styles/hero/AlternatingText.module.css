@@ -13,7 +13,7 @@
     overflow-x: hidden;
     position: absolute;
     text-overflow: unset;
-    transition: width .32s ease,opacity .32s ease-in,filter .32s ease-in;
+    transition: width .32s ease, opacity .32s ease-in,filter .32s ease-in;
     white-space: nowrap;
     width: 0;
     font-size: 24px;

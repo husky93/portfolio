@@ -22,7 +22,15 @@
   font-size: 24px;
   margin: 0;
   font-weight: 300;
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity .32s .85s ease-in, filter .32s .85s ease-in;
   color: var(--color-text-light);
+}
+
+.visible .email {
+  opacity: 1;
+  filter: blur(0px);
 }
 
 @media screen and (min-width: 768px) {

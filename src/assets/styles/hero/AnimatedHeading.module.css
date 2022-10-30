@@ -10,9 +10,21 @@
   display: inline-block;
   font-size: 64px;
   transform-origin: 0 50%;
+  font-weight: 900;
+}
+
+.heading.sm {
+  font-size: 32px;
+}
+
+.heading.active.sm {
+  animation: animate 700ms 100ms;
+  animation-fill-mode: forwards;
+}
+
+.heading.active {
   animation: animate 700ms 500ms;
   animation-fill-mode: forwards;
-  font-weight: 900;
 }
 
 @keyframes animate {
@@ -34,6 +46,9 @@
   .heading {
     font-size: 72px;
   }
+  .heading.sm {
+    font-size: 42px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -42,6 +57,9 @@
   }
   .heading {
     font-size: 92px;
+  }
+  .heading.sm {
+    font-size: 60px;
   }
 }
 

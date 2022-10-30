@@ -22,8 +22,8 @@ const Hero: React.FC<HeroProps> = () => {
           Hi, my name is
         </p>
         <h1 className={styles.header}>
-          <AnimatedHeading text="Maciej" />
-          <AnimatedHeading text="Sroka" />
+          <AnimatedHeading text="Maciej" active />
+          <AnimatedHeading text="Sroka" active />
         </h1>
         <AlternatingText
           text={['Frontend Developer', 'JavaScript', 'TypeScript', 'React']}

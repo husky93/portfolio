@@ -9,14 +9,14 @@
 
 .main {
   opacity: 0;
-  transition: opacity 0.25s 0.25s;
   position: relative;
   width: 100%;
-  transition: all 300ms;
+  transition: opacity 0.20s 0.05s, transform 0.4s;
   z-index: 1;
   box-shadow: rgba(0, 0, 0, 0.7) 0px 4px 6px -1px, rgba(0, 0, 0, 0.4) 0px 2px 4px -1px;
   overflow: hidden;
   background-color: var(--color-bg);
+  transform-origin: top center;
 }
 
 .main.rendered {
@@ -24,17 +24,11 @@
 }
 
 .active {
-  transform: perspective(100vh) translate3d(0px, 0px, -5vh);
+  transform: scale(0.85) translateY(165px);
 }
 
-@-moz-document url-prefix() { 
+@media screen and (min-width: 768px) {
   .active {
-    transform: translate3d(0px, 150px, -5vh);
+    transform: scale(0.85) translateY(140px);
   }
-  @media screen and (min-width: 768px) {
-    .active {
-      transform: translate3d(0px, 120px, -5vh);
-    }
-  }
-
 }

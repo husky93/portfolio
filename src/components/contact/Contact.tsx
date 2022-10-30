@@ -1,4 +1,4 @@
-import React, { lazy, useState, useCallback } from 'react';
+import React, { lazy } from 'react';
 import { useObserver } from '../../app/hooks';
 import styles from '../../assets/styles/contact/Contact.module.css';
 
@@ -16,9 +16,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
       className={styles.contact}
       ref={containerRef}
     >
-      <div
-        className={`${styles.container} ${isVisible ? styles.in_viewport : ''}`}
-      >
+      <div className={`${isVisible ? 'in_viewport' : ''}`}>
         <h2 className={styles.heading}>Want to get in contact?</h2>
         <p className={styles.email}>sroka.maciej93@gmail.com</p>
       </div>

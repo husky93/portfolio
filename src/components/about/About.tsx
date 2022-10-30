@@ -70,7 +70,7 @@ const About: React.FC<AboutProps> = ({}) => {
                     {' '}
                     web development{' '}
                   </strong>
-                  started when i was around 13. Thats when I created my first
+                  started when I was around 13. Thats when I created my first
                   website based on jPortal2 CMS.
                 </p>
 

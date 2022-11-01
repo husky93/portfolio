@@ -42,13 +42,15 @@ const skillsArray: Array<SkillsObject> = [
 ];
 
 const Skills: React.FC<SkillsProps> = ({}) => {
-  const { isVisible, containerRef } = useObserver(0.2);
+  const { isVisible, hasIntersected, containerRef } = useObserver(0.2);
 
   return (
     <section
       id="skills"
       aria-label="Skills"
-      className={`${styles.skills} ${isVisible ? styles.in_viewport : ''}`}
+      className={`${styles.skills} ${isVisible ? styles.in_viewport : ''} ${
+        hasIntersected ? styles.intersected : ''
+      }`}
       ref={containerRef}
     >
       <div className={styles.content}>

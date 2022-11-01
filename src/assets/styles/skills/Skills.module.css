@@ -24,17 +24,16 @@
 .content {
   text-align: center;
   transform: translateY(120%);
-  opacity: 0.3;
-  transition: transform 550ms, opacity 650ms;
+  opacity: 0;
+  transition: transform 550ms, opacity 300ms;
 }
 
 .skills.in_viewport .content {
-  transform: translateY(0px);
   opacity: 1;
 }
 
-.in_viewport {
-
+.skills.intersected .content{
+  transform: translateY(0px);
 }
 
 @media screen and (min-width: 768px) {

@@ -19,9 +19,9 @@
 
 .content .left {
   will-change: transform;
-  opacity: 0.5;
+  opacity: 0;
   transform: translateX(-100vw);
-  transition: transform 500ms ease-out, opacity 600ms ease-out;
+  transition: transform 500ms ease-out, opacity 250ms ease-out;
   box-shadow: 0 24px 43px rgb(25 17 34 / 20%), 0 20px 17px rgb(25 17 34 / 20%);
   border-radius: var(--border-radius);
 }
@@ -33,9 +33,9 @@
 .content .right {
   will-change: transform;
   background-color: var(--color-bg);
-  opacity: 0.5;
+  opacity: 0;
   transform: translateX(100vw);
-  transition: transform 500ms ease-out, opacity 600ms ease-out;
+  transition: transform 500ms ease-out, opacity 250ms ease-out;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   border-radius: var(--border-radius);
   z-index: 15;

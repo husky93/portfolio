@@ -26,7 +26,7 @@ const Project: React.FC<ProjectProps> = ({
   ghLink,
   liveLink,
 }) => {
-  const { containerRef, isVisible } = useObserver(0.4);
+  const { containerRef, isVisible, hasIntersected } = useObserver(0.4);
   const { sectionRef, offset, windowHeight } = useParallax();
   const projectRef = useRef(null!);
 
@@ -42,7 +42,7 @@ const Project: React.FC<ProjectProps> = ({
         description={description}
         ghLink={ghLink}
         liveLink={liveLink}
-        hidden={!isVisible}
+        hidden={!hasIntersected}
       >
         {children}
       </ProjectDetails>
@@ -53,18 +53,25 @@ const Project: React.FC<ProjectProps> = ({
   };
 
   const setTransform = (position: 'left' | 'right', rotation?: number) => {
+    let lastTranslation;
+    if (hasIntersected && !isVisible && imagePosition === position) {
+      return {
+        transform: `translateX(0px) translateY(${lastTranslation}px)`,
+      };
+    }
+    if (hasIntersected && imagePosition !== position) {
+      return {
+        transform: `translateX(0px) translateY(0px)`,
+      };
+    }
     const offsetRotation =
       rotation && rotation + rotation * (offset / windowHeight.current);
-    if (isVisible && imagePosition === position) {
+    if (hasIntersected && imagePosition === position) {
+      lastTranslation = offset / 35;
       return {
         transform: `translateX(0px) translateY(${offset / 35}px) ${
           rotation ? 'rotate(' + offsetRotation + 'deg)' : ''
         }`,
-      };
-    }
-    if (isVisible && imagePosition !== position) {
-      return {
-        transform: `translateX(0px) translateY(0px)`,
       };
     }
     return {};

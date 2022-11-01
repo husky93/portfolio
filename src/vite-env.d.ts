@@ -4,6 +4,7 @@
 interface ObserverObject {
   containerRef: RefObject<HTMLElement>;
   isVisible: boolean;
+  hasIntersected: boolean;
 }
 
 interface ParallaxObject {

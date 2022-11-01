@@ -9,7 +9,7 @@ interface AboutProps {}
 
 const About: React.FC<AboutProps> = ({}) => {
   const aboutRef = useRef(null!);
-  const { isVisible, containerRef } = useObserver(0.4);
+  const { isVisible, hasIntersected, containerRef } = useObserver(0.4);
   const { offset, sectionRef, windowHeight } = useParallax();
 
   useEffect(() => {
@@ -23,19 +23,27 @@ const About: React.FC<AboutProps> = ({}) => {
       ratio: number,
       rotation?: number
     ): ParallaxStyleObject | EmptyObject => {
+      let lastTranslation;
+      if (hasIntersected && !isVisible)
+        return {
+          transform: `translateX(0px) translateY(${lastTranslation})`,
+        };
       let offsetRotation;
       if (rotation)
         offsetRotation =
           rotation + rotation * -((1.75 * offset) / windowHeight.current);
-      return isVisible
-        ? {
-            transform: `translateX(0px) translateY(${
-              offset / ratio - margin
-            }px) ${rotation ? `rotate(${offsetRotation}deg)` : ''}`,
-          }
-        : {};
+      if (hasIntersected && isVisible) {
+        lastTranslation = offset / ratio - margin;
+        return {
+          transform: `translateX(0px) translateY(${
+            offset / ratio - margin
+          }px) ${rotation ? `rotate(${offsetRotation}deg)` : ''}`,
+        };
+      }
+
+      return {};
     },
-    [isVisible, offset]
+    [isVisible, hasIntersected, offset]
   );
 
   return (
@@ -47,7 +55,11 @@ const About: React.FC<AboutProps> = ({}) => {
       >
         <div className={styles.content}>
           <div className={styles.left} style={setTransform(0, 8, -1)}>
-            <Curtain direction="left" startAnimation={isVisible} delay={500}>
+            <Curtain
+              direction="left"
+              startAnimation={hasIntersected}
+              delay={500}
+            >
               <Image
                 alt="Profile"
                 imgName="profile"
@@ -56,7 +68,11 @@ const About: React.FC<AboutProps> = ({}) => {
             </Curtain>
           </div>
           <div className={styles.right} style={setTransform(0, 20)}>
-            <Curtain direction="right" startAnimation={isVisible} delay={1000}>
+            <Curtain
+              direction="right"
+              startAnimation={hasIntersected}
+              delay={1000}
+            >
               <div className={styles.about_text}>
                 <h2 className={`${styles.heading} h2`}>About Me</h2>
                 <p className={styles.desc}>

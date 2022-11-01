@@ -4,10 +4,12 @@ import type { RefObject } from 'react';
 export const useObserver = (threshold: number): ObserverObject => {
   const containerRef: RefObject<HTMLElement> = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [hasIntersected, setHasIntersected] = useState(false);
 
   const handleIntersection: IntersectionObserverCallback = (entries) => {
     const [entry] = entries;
-    if (!isVisible && entry.isIntersecting) setIsVisible(true);
+    setIsVisible(entry.isIntersecting);
+    if (!hasIntersected && entry.isIntersecting) setHasIntersected(true);
   };
 
   const options: IntersectionObserverInit = {
@@ -25,7 +27,7 @@ export const useObserver = (threshold: number): ObserverObject => {
     };
   }, [containerRef, options]);
 
-  return { containerRef, isVisible };
+  return { containerRef, isVisible, hasIntersected };
 };
 
 export const useParallax = (): ParallaxObject => {

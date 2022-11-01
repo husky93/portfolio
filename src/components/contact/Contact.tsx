@@ -7,7 +7,7 @@ const AnimatedHeading = lazy(() => import('../hero/AnimatedHeading'));
 interface ContactProps {}
 
 const Contact: React.FC<ContactProps> = ({}) => {
-  const { isVisible, containerRef } = useObserver(0.5);
+  const { hasIntersected, containerRef } = useObserver(0.5);
 
   return (
     <section
@@ -16,11 +16,11 @@ const Contact: React.FC<ContactProps> = ({}) => {
       className={styles.contact}
       ref={containerRef}
     >
-      <div className={`${isVisible ? `${styles.visible}` : ''}`}>
+      <div className={`${hasIntersected ? `${styles.visible}` : ''}`}>
         <h2 className={styles.heading}>
           <AnimatedHeading
             text="Want to get in contact?"
-            active={isVisible}
+            active={hasIntersected}
             sm
           />
         </h2>

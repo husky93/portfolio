@@ -5,13 +5,15 @@
   --color-text: #0A192F;
   --color-text-light: #0E2343;
   --color-bg: #EDF2F4;
-  --color-dark: #576066;
+  --color-dark: #4A7B9D;
   --color-primary: #F06449;
   --color-primary-hover: #ED3F1D;
   --color-primary-light: #FCDFD9;
   --color-secondary: #8C2F39;
   --color-grey: #e2e8f0;
 }
+
+/* #647AA3; */
 
 html,
 body {

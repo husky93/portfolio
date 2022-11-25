@@ -123,6 +123,11 @@
   transform: translate3d(-120px, 75px, -160px);
 }
 
+.container .item.active:nth-child(18) {
+  transform: translate3d(-40px, 0px, -110px);
+}
+
+
 
 @keyframes rotate{
   to{

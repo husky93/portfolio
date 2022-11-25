@@ -17,6 +17,7 @@ import { ReactComponent as WebpackIcon } from '../../assets/icons/webpack.svg';
 import { ReactComponent as ViteIcon } from '../../assets/icons/vite.svg';
 import { ReactComponent as NextIcon } from '../../assets/icons/nextjs.svg';
 import { ReactComponent as FirebaseIcon } from '../../assets/icons/firebase.svg';
+import { ReactComponent as Vue } from '../../assets/icons/vue.svg';
 
 const iconArray: Array<React.ReactNode> = [
   <JsIcon />,
@@ -36,6 +37,7 @@ const iconArray: Array<React.ReactNode> = [
   <ViteIcon />,
   <NextIcon />,
   <FirebaseIcon />,
+  <Vue />,
 ];
 
 interface SphereProps {}

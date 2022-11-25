@@ -17,6 +17,7 @@ import { ReactComponent as SassIcon } from '../../assets/icons/sass.svg';
 import { ReactComponent as WebpackIcon } from '../../assets/icons/webpack.svg';
 import { ReactComponent as ViteIcon } from '../../assets/icons/vite.svg';
 import { ReactComponent as NextIcon } from '../../assets/icons/nextjs.svg';
+import { ReactComponent as VueIcon } from '../../assets/icons/vue.svg';
 
 const SkillsItem = lazy(() => import('./SkillsItem'));
 
@@ -26,6 +27,7 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <JsIcon />, title: 'JavaScript' },
   { icon: <TsIcon />, title: 'TypeScript' },
   { icon: <ReactIcon />, title: 'React' },
+  { icon: <VueIcon />, title: 'vue.js' },
   { icon: <HtmlIcon />, title: 'HTML' },
   { icon: <CssIcon />, title: 'CSS' },
   { icon: <GitIcon />, title: 'GIT' },

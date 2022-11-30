@@ -5,12 +5,12 @@
 }
 
 .heading {
-  font-family: 'Hahmlet', serif;
+  font-family: var(--secondary-font);
   transform: translate(100px, 200%) rotate(25deg);
   display: inline-block;
   font-size: 64px;
   transform-origin: 0 50%;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .heading.sm {

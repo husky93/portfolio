@@ -12,7 +12,7 @@
 }
 
 .heading {
-  font-family: 'Hahmlet', serif;
+  font-family: var(--secondary-font);
   font-size: 36px;
   margin: 0;
   font-weight: 900;

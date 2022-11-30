@@ -15,6 +15,7 @@
   margin-bottom: 64px;
   margin-left: auto;
   transform-style: preserve-3d;
+  background-color: transparent;
 }
 
 .container {
@@ -25,6 +26,7 @@
   animation : rotate 25s infinite linear;
   background-color: transparent;
 }
+
 
 .item {
   will-change: transform;
@@ -58,7 +60,7 @@
 
 
 .container .item.active:nth-child(3) {
-  transform: translate3d(-60px, -60px, -60px);
+  transform: translate3d(0px, -90px, -25px);
 }
 
 
@@ -73,7 +75,7 @@
 
 
 .container .item.active:nth-child(6) {
-  transform: translate3d(90px, 40px, 10px);
+  transform: translate3d(110px, 40px, 10px);
 }
 
 
@@ -96,11 +98,11 @@
 }
 
 .container .item.active:nth-child(11) {
-  transform: translate3d(-120px, 120px, 0px);
+  transform: translate3d(-110px, 110px, 0px);
 }
 
 .container .item.active:nth-child(12) {
-  transform: translate3d(60px, 120px, -120px);
+  transform: translate3d(60px, 110px, -110px);
 }
 
 .container .item.active:nth-child(13) {
@@ -108,36 +110,48 @@
 }
 
 .container .item.active:nth-child(14) {
-  transform: translate3d(-60px, -80px, -120px);
+  transform: translate3d(-60px, -80px, -110px);
 }
 
 .container .item.active:nth-child(15) {
-  transform: translate3d(-120px, 60px, 120px);
+  transform: translate3d(-110px, 60px, 110px);
 }
 
 .container .item.active:nth-child(16) {
-  transform: translate3d(-120px, 0px, 80px);
+  transform: translate3d(25px, 130px, 25px);
 }
 
 .container .item.active:nth-child(17) {
-  transform: translate3d(-120px, 75px, -160px);
+  transform: translate3d(-110px, 75px, -110px);
 }
 
 .container .item.active:nth-child(18) {
   transform: translate3d(-40px, 0px, -110px);
 }
 
+.container .item.active:nth-child(19) {
+  transform: translate3d(45px, 35px, 75px);
+}
+
+.container .item.active:nth-child(20) {
+  transform: translate3d(-65px, 110px, 90px);
+}
+
+.container .item.active:nth-child(21) {
+  transform: translate3d(-75px, 110px, -100px);
+}
+
 
 
 @keyframes rotate{
   to{
-    transform:rotateY(360deg)
+    transform:rotateY(360deg);
   }
 }
 
 @keyframes invertRotate{
   to{
-    transform:rotateY(-360deg);
+    transform: rotateY(-360deg);
   }
 }
 

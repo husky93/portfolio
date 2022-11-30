@@ -26,7 +26,12 @@ const Hero: React.FC<HeroProps> = () => {
           <AnimatedHeading text="Sroka" active />
         </h1>
         <AlternatingText
-          text={['Frontend Developer', 'JavaScript', 'TypeScript', 'React']}
+          text={[
+            'JavaScript Developer',
+            'TypeScript',
+            'React',
+            'Node.js + Express',
+          ]}
         />
       </div>
     </section>

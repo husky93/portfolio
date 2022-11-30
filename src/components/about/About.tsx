@@ -98,17 +98,17 @@ const About: React.FC<AboutProps> = ({}) => {
                   </strong>{' '}
                   I have instantly felt like fish in the water, and got hooked
                   into the world of coding. Over the last few years I have
-                  gained solid knowledge of{' '}
+                  gained solid knowledge of both client and server side{' '}
                   <strong className={styles.highlighted}>
-                    frontend development
+                    website development.
                   </strong>{' '}
-                  and programming in general. Although there is still a lot for
-                  me to learn I believe I can be a valuable asset to a Frontend
-                  Development team and continue my growth working on real world
-                  projects. So if you're looking for a motivated,
-                  willing-to-learn, developer with a solid knowledge and passion
-                  to build fast, functional, accessible, responsive UIs - hit me
-                  up 😁!
+                  Although there is still a lot for me to learn I believe I can
+                  be a valuable asset to a web development team and continue my
+                  growth working on real world projects. So if you're looking
+                  for a motivated, willing-to-learn, developer with a solid
+                  knowledge of modern JavaScript based technologies and passion
+                  to build fast, functional, accessible, responsive websites -
+                  hit me up 😁!
                 </p>
               </div>
             </Curtain>

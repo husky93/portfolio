@@ -27,6 +27,8 @@
 .item {
   cursor: pointer;
   transition: transform 300ms;
+  font-weight: 500;
+  font-size: 1.05rem;
   transform: translate(0px, 100px);
 }
 

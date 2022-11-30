@@ -12,6 +12,7 @@ import { ReactComponent as WebpackIcon } from '../../assets/icons/webpack.svg';
 import { ReactComponent as JsIcon } from '../../assets/icons/js.svg';
 import { ReactComponent as TestingIcon } from '../../assets/icons/testing-library.svg';
 import { ReactComponent as StyledIcon } from '../../assets/icons/styled.svg';
+import { ReactComponent as VueIcon } from '../../assets/icons/vue.svg';
 import { ReactComponent as ArrowIcon } from '../../assets/icons/arrowupright.svg';
 
 interface PortfolioProps {}
@@ -142,6 +143,28 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           </Badge>
           <Badge>
             <JestIcon /> jest
+          </Badge>
+        </Project>
+        <Project
+          title="Stock Trading App"
+          description="A stock trading SPA made with use of Vue.js and Vuex as a centralized state container. Purpose of the project was to get familiar with Vue.js framework."
+          imageName="stock"
+          imageBlurHash="L13+y2IU8w%2QBIU%|xbXRVttQfk"
+          imagePosition="right"
+          ghLink="https://github.com/husky93/vue-stock-trader"
+          liveLink="https://husky93.github.io/vue-stock-trader/"
+        >
+          <Badge>
+            <JsIcon /> JavaScript
+          </Badge>
+          <Badge>
+            <VueIcon /> Vue.js
+          </Badge>
+          <Badge>
+            <VueIcon /> Vuex
+          </Badge>
+          <Badge>
+            <VueIcon /> vue-router
           </Badge>
         </Project>
       </div>

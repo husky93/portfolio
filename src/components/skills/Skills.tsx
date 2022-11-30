@@ -15,9 +15,10 @@ import { ReactComponent as StyledIcon } from '../../assets/icons/styled.svg';
 import { ReactComponent as TailwindIcon } from '../../assets/icons/tailwindcss.svg';
 import { ReactComponent as SassIcon } from '../../assets/icons/sass.svg';
 import { ReactComponent as WebpackIcon } from '../../assets/icons/webpack.svg';
-import { ReactComponent as ViteIcon } from '../../assets/icons/vite.svg';
-import { ReactComponent as NextIcon } from '../../assets/icons/nextjs.svg';
 import { ReactComponent as VueIcon } from '../../assets/icons/vue.svg';
+import { ReactComponent as NodeIcon } from '../../assets/icons/nodejs.svg';
+import { ReactComponent as ExpressIcon } from '../../assets/icons/express.svg';
+import { ReactComponent as MongoIcon } from '../../assets/icons/mongo.svg';
 
 const SkillsItem = lazy(() => import('./SkillsItem'));
 
@@ -28,6 +29,8 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <TsIcon />, title: 'TypeScript' },
   { icon: <ReactIcon />, title: 'React' },
   { icon: <VueIcon />, title: 'vue.js' },
+  { icon: <NodeIcon />, title: 'Node.js' },
+  { icon: <ExpressIcon />, title: 'Express' },
   { icon: <HtmlIcon />, title: 'HTML' },
   { icon: <CssIcon />, title: 'CSS' },
   { icon: <GitIcon />, title: 'GIT' },
@@ -39,8 +42,7 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <SassIcon />, title: 'Sass' },
   { icon: <WebpackIcon />, title: 'Webpack' },
   { icon: <NpmIcon />, title: 'NPM' },
-  { icon: <ViteIcon />, title: 'Vite' },
-  { icon: <NextIcon />, title: 'Next.js' },
+  { icon: <MongoIcon />, title: 'MongoDB' },
 ];
 
 const Skills: React.FC<SkillsProps> = ({}) => {

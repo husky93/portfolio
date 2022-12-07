@@ -15,7 +15,6 @@ import { ReactComponent as StyledIcon } from '../../assets/icons/styled.svg';
 import { ReactComponent as TailwindIcon } from '../../assets/icons/tailwindcss.svg';
 import { ReactComponent as SassIcon } from '../../assets/icons/sass.svg';
 import { ReactComponent as WebpackIcon } from '../../assets/icons/webpack.svg';
-import { ReactComponent as VueIcon } from '../../assets/icons/vue.svg';
 import { ReactComponent as NodeIcon } from '../../assets/icons/nodejs.svg';
 import { ReactComponent as ExpressIcon } from '../../assets/icons/express.svg';
 import { ReactComponent as MongoIcon } from '../../assets/icons/mongo.svg';
@@ -28,7 +27,6 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <JsIcon />, title: 'JavaScript' },
   { icon: <TsIcon />, title: 'TypeScript' },
   { icon: <ReactIcon />, title: 'React' },
-  { icon: <VueIcon />, title: 'vue.js' },
   { icon: <NodeIcon />, title: 'Node.js' },
   { icon: <ExpressIcon />, title: 'Express' },
   { icon: <HtmlIcon />, title: 'HTML' },

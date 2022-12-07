@@ -145,28 +145,6 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
             <JestIcon /> jest
           </Badge>
         </Project>
-        <Project
-          title="Stock Trading App"
-          description="A stock trading SPA made with use of Vue.js and Vuex as a centralized state container. Purpose of the project was to get familiar with Vue.js framework."
-          imageName="stock"
-          imageBlurHash="L13+y2IU8w%2QBIU%|xbXRVttQfk"
-          imagePosition="right"
-          ghLink="https://github.com/husky93/vue-stock-trader"
-          liveLink="https://husky93.github.io/vue-stock-trader/"
-        >
-          <Badge>
-            <JsIcon /> JavaScript
-          </Badge>
-          <Badge>
-            <VueIcon /> Vue.js
-          </Badge>
-          <Badge>
-            <VueIcon /> Vuex
-          </Badge>
-          <Badge>
-            <VueIcon /> vue-router
-          </Badge>
-        </Project>
       </div>
       <div className={styles.viewmore}>
         <Button navigateTo="https://github.com/husky93?tab=repositories">

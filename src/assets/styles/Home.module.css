@@ -1,11 +1,9 @@
 .container {
   position: relative;
   background-color: var(--color-dark);
-  max-width: 1200px;
   min-height: 100vh;
   margin: 0 auto;
 }
-
 
 .main {
   opacity: 0;
@@ -17,6 +15,8 @@
   overflow: hidden;
   background-color: var(--color-bg);
   transform-origin: top center;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .main.rendered {

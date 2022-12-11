@@ -5,7 +5,9 @@ interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = ({}) => {
   return (
-    <footer className={styles.footer}>Copyright © 2022 Maciej Sroka</footer>
+    <footer className={styles.footer}>
+      Copyright © 2022 <span className={styles.highlighted}>Maciej Sroka</span>
+    </footer>
   );
 };
 

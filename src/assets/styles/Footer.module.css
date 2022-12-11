@@ -3,3 +3,8 @@
   text-align: center;
   font-weight: 300;
 }
+
+.highlighted {
+  color: var(--color-primary);
+  font-weight: 500;
+}

@@ -1,6 +1,6 @@
 .about {
   position: relative;
-  padding: 82px 24px;
+  padding: 128px 24px 64px 24px;
   min-height: 130vh;
   display: flex;
   flex-direction: column;
@@ -90,6 +90,7 @@
 @media screen and (min-width: 889px) {
   .about {
     min-height: 75vh;
+    padding: 64px 24px;
   }
   .content {
     flex-direction: row;

@@ -25,126 +25,128 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
   return (
     <section className={styles.projects} id="projects">
       <div className={styles.content}>
-        <h2 className="h2">My Projects</h2>
-        <Project
-          title="Portfolio"
-          description="This is the website you're on right now! The goal was to make an interactive, responsive portfolio website. Something caught your attention? See how I programmed it by clicking Code button below!"
-          imageName="portfolio"
-          imageBlurHash="L8Q,USITIB%M%#W;ayWB~q%2%LR."
-          imagePosition="left"
-          ghLink="https://github.com/husky93/portfolio"
-        >
-          <Badge>
-            <TsIcon /> TypeScript
-          </Badge>
-          <Badge>
-            <ReactIcon /> React
-          </Badge>
-          <Badge>
-            <CssIcon /> CSS Modules
-          </Badge>
-          <Badge>
-            <ViteIcon /> Vite
-          </Badge>
-        </Project>
-        <Project
-          title="Social Blogging Platform"
-          description="Social Blogging Platform inspired by medium.com and dev.to. The goal was to program as much of core functionality of such platform in a limited time. You can login, add new posts, comment, bookmark and like them. For full list of features you can read project documentation by clicking Code button below."
-          imageName="blog"
-          imageBlurHash="L3SigR^+%h_Mx[j^9F9Z_1%MRhD%"
-          imagePosition="right"
-          ghLink="https://github.com/husky93/social-blogging-platform"
-          liveLink="https://husky93.github.io/social-blogging-platform/"
-        >
-          <Badge>
-            <TsIcon /> TypeScript
-          </Badge>
-          <Badge>
-            <ReactIcon /> React
-          </Badge>
-          <Badge>
-            <ReduxIcon /> Redux-Toolkit
-          </Badge>
-          <Badge>
-            <TailwindIcon /> TailwindCSS
-          </Badge>
-          <Badge>
-            <ViteIcon /> Vite
-          </Badge>
-          <Badge>
-            <FirebaseIcon /> Firebase
-          </Badge>
-        </Project>
-        <Project
-          title="Where's Waldo Game"
-          description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your time in a scoreboard! The goal of this project was to learn more about TDD with React and about client-server interaction"
-          imageName="waldo"
-          imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
-          imagePosition="left"
-          ghLink="https://github.com/husky93/photo-tagging-app"
-          liveLink="https://husky93.github.io/photo-tagging-app/"
-        >
-          <Badge>
-            <JsIcon /> JavaScript
-          </Badge>
-          <Badge>
-            <ReactIcon /> React
-          </Badge>
-          <Badge>
-            <StyledIcon /> styled-components
-          </Badge>
-          <Badge>
-            <JestIcon /> jest
-          </Badge>
-          <Badge>
-            <TestingIcon /> testing-library
-          </Badge>
-          <Badge>
-            <FirebaseIcon /> Firebase
-          </Badge>
-        </Project>
-        <Project
-          title="Store Frontend"
-          description="Interactive Frontend of a Store coded with use of React library and Test-Driven-Development methodology. Goal of this project was to get used with routing in React and practice React functional component hooks usage as well as responsive styling and writing unit tests for React components."
-          imageName="store"
-          imageBlurHash="L2QJfm000000o|t7.8tRxbpG~Xx["
-          imagePosition="right"
-          ghLink="https://github.com/husky93/storefront"
-          liveLink="https://husky93.github.io/storefront/"
-        >
-          <Badge>
-            <JsIcon /> JavaScript
-          </Badge>
-          <Badge>
-            <ReactIcon /> React
-          </Badge>
-          <Badge>
-            <JestIcon /> jest
-          </Badge>
-          <Badge>
-            <TestingIcon /> testing-library
-          </Badge>
-        </Project>
-        <Project
-          title="Battleships Game"
-          description="A Battleships game web application written fully in “vanilla” JavaScript with use of Test-Driven-Development methodology and OOP principles. Place your ships and play against an advanced AI that chooses which tile to hit based on already hit ship tiles."
-          imageName="battleships"
-          imageBlurHash="L66*X=oa$;xBo#W-S5oL4,a}StR."
-          imagePosition="left"
-          ghLink="https://github.com/husky93/battleship-game"
-          liveLink="https://husky93.github.io/battleship-game/"
-        >
-          <Badge>
-            <JsIcon />
-            JavaScript
-          </Badge>
-          <Badge>
-            <WebpackIcon /> webpack
-          </Badge>
-          <Badge>
-            <JestIcon /> jest
-          </Badge>
-        </Project>
+        <div className={styles.wrapper}>
+          <h2 className="h2">My Projects</h2>
+          <Project
+            title="Portfolio"
+            description="This is the website you're on right now! The goal was to make an interactive, responsive portfolio website. Something caught your attention? See how I programmed it by clicking Code button below!"
+            imageName="portfolio"
+            imageBlurHash="L8Q,USITIB%M%#W;ayWB~q%2%LR."
+            imagePosition="left"
+            ghLink="https://github.com/husky93/portfolio"
+          >
+            <Badge>
+              <TsIcon /> TypeScript
+            </Badge>
+            <Badge>
+              <ReactIcon /> React
+            </Badge>
+            <Badge>
+              <CssIcon /> CSS Modules
+            </Badge>
+            <Badge>
+              <ViteIcon /> Vite
+            </Badge>
+          </Project>
+          <Project
+            title="Social Blogging Platform"
+            description="Social Blogging Platform inspired by medium.com and dev.to. The goal was to program as much of core functionality of such platform in a limited time. You can login, add new posts, comment, bookmark and like them. For full list of features you can read project documentation by clicking Code button below."
+            imageName="blog"
+            imageBlurHash="L3SigR^+%h_Mx[j^9F9Z_1%MRhD%"
+            imagePosition="right"
+            ghLink="https://github.com/husky93/social-blogging-platform"
+            liveLink="https://husky93.github.io/social-blogging-platform/"
+          >
+            <Badge>
+              <TsIcon /> TypeScript
+            </Badge>
+            <Badge>
+              <ReactIcon /> React
+            </Badge>
+            <Badge>
+              <ReduxIcon /> Redux-Toolkit
+            </Badge>
+            <Badge>
+              <TailwindIcon /> TailwindCSS
+            </Badge>
+            <Badge>
+              <ViteIcon /> Vite
+            </Badge>
+            <Badge>
+              <FirebaseIcon /> Firebase
+            </Badge>
+          </Project>
+          <Project
+            title="Where's Waldo Game"
+            description="Where's Waldo image tagging game coded with use of React library and Test-Driven-Development methodology. Find Waldo and his friends and save your time in a scoreboard! The goal of this project was to learn more about TDD with React and about client-server interaction"
+            imageName="waldo"
+            imageBlurHash="LPOM~fxuaeNG_3RjWBaz~qWBWBxu"
+            imagePosition="left"
+            ghLink="https://github.com/husky93/photo-tagging-app"
+            liveLink="https://husky93.github.io/photo-tagging-app/"
+          >
+            <Badge>
+              <JsIcon /> JavaScript
+            </Badge>
+            <Badge>
+              <ReactIcon /> React
+            </Badge>
+            <Badge>
+              <StyledIcon /> styled-components
+            </Badge>
+            <Badge>
+              <JestIcon /> jest
+            </Badge>
+            <Badge>
+              <TestingIcon /> testing-library
+            </Badge>
+            <Badge>
+              <FirebaseIcon /> Firebase
+            </Badge>
+          </Project>
+          <Project
+            title="Store Frontend"
+            description="Interactive Frontend of a Store coded with use of React library and Test-Driven-Development methodology. Goal of this project was to get used with routing in React and practice React functional component hooks usage as well as responsive styling and writing unit tests for React components."
+            imageName="store"
+            imageBlurHash="L2QJfm000000o|t7.8tRxbpG~Xx["
+            imagePosition="right"
+            ghLink="https://github.com/husky93/storefront"
+            liveLink="https://husky93.github.io/storefront/"
+          >
+            <Badge>
+              <JsIcon /> JavaScript
+            </Badge>
+            <Badge>
+              <ReactIcon /> React
+            </Badge>
+            <Badge>
+              <JestIcon /> jest
+            </Badge>
+            <Badge>
+              <TestingIcon /> testing-library
+            </Badge>
+          </Project>
+          <Project
+            title="Battleships Game"
+            description="A Battleships game web application written fully in “vanilla” JavaScript with use of Test-Driven-Development methodology and OOP principles. Place your ships and play against an advanced AI that chooses which tile to hit based on already hit ship tiles."
+            imageName="battleships"
+            imageBlurHash="L66*X=oa$;xBo#W-S5oL4,a}StR."
+            imagePosition="left"
+            ghLink="https://github.com/husky93/battleship-game"
+            liveLink="https://husky93.github.io/battleship-game/"
+          >
+            <Badge>
+              <JsIcon />
+              JavaScript
+            </Badge>
+            <Badge>
+              <WebpackIcon /> webpack
+            </Badge>
+            <Badge>
+              <JestIcon /> jest
+            </Badge>
+          </Project>
+        </div>
       </div>
       <div className={styles.viewmore}>
         <Button navigateTo="https://github.com/husky93?tab=repositories">

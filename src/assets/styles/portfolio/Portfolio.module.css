@@ -6,11 +6,15 @@
   background-color: var(--color-grey);
 }
 
-
-.content {
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 84px;
+}
+
+.content {
   padding: 18px 18px 64px 18px;
   position: relative;
 }

@@ -11,6 +11,11 @@
   background-color:var(--color-grey);
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .list {
   display: flex;
   flex-wrap: wrap;

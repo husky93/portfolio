@@ -26,6 +26,7 @@
   filter: blur(8px);
   transition: opacity .32s .85s ease-in, filter .32s .85s ease-in;
   color: var(--color-text-light);
+  text-align: center;
 }
 
 .visible .email {
@@ -42,6 +43,7 @@
   }
   .email {
     font-size: 32px;
+    text-align: left;
   }
 }
 

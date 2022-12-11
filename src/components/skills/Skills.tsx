@@ -55,15 +55,17 @@ const Skills: React.FC<SkillsProps> = ({}) => {
       }`}
       ref={containerRef}
     >
-      <div className={styles.content}>
-        <h2 className="h2">Skills</h2>
-        <ul className={styles.list}>
-          {skillsArray.map((item, index) => (
-            <SkillsItem title={item.title} key={`${item.title}-${index}`}>
-              {item.icon}
-            </SkillsItem>
-          ))}
-        </ul>
+      <div className={styles.wrapper}>
+        <div className={styles.content}>
+          <h2 className="h2">Skills</h2>
+          <ul className={styles.list}>
+            {skillsArray.map((item, index) => (
+              <SkillsItem title={item.title} key={`${item.title}-${index}`}>
+                {item.icon}
+              </SkillsItem>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

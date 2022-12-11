@@ -1,21 +1,20 @@
 .wrapper {
   height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
-  position: relative;
-  z-index: 25;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .sphere {
   width: 400px;
   height: 400px;
-  position: relative;
-  margin-top: 40vh;
-  margin-right: auto;
-  margin-bottom: 84px;
-  margin-left: auto;
   transform-style: preserve-3d;
   background-color: transparent;
+  margin-bottom: 24px;
 }
 
 .container {
@@ -50,95 +49,95 @@
 }
 
 .container .item.active:nth-child(1) {
-  transform: translate3d(-130px, 0px, 10px);
+  transform: translate3d(-150px, -60px, 30px);
 }
 
 
 .container .item.active:nth-child(2) {
-  transform: translate3d(60px, 60px, -60px);
+  transform: translate3d(80px, 40px, -80px);
 }
 
 
 .container .item.active:nth-child(3) {
-  transform: translate3d(0px, -90px, -25px);
+  transform: translate3d(20px, -150px, -45px);
 }
 
 
 .container .item.active:nth-child(4) {
-  transform: translate3d(-60px, 0, 45px);
+  transform: translate3d(-80px, -60px, 65px);
 }
 
 
 .container .item.active:nth-child(5) {
-  transform: translate3d(90px, -40px, -100px);
+  transform: translate3d(90px, -100px, -110px);
 }
 
 
 .container .item.active:nth-child(6) {
-  transform: translate3d(110px, 40px, 10px);
+  transform: translate3d(130px, 20px, 30px);
 }
 
 
 .container .item.active:nth-child(7) {
-  transform: translate3d(-60px, 0, -60px);
+  transform: translate3d(-80px, -60px, -80px);
 }
 
 
 .container .item.active:nth-child(8) {
-  transform: translate3d(-60px, -60px, 90px);
+  transform: translate3d(-80px, -120px, 110px);
 }
 
 
 .container .item.active:nth-child(9) {
-  transform: translate3d(60px, 90px, 90px);
+  transform: translate3d(80px, 70px, 110px);
 }
 
 .container .item.active:nth-child(10) {
-  transform: translate3d(0px, 80px, -60px);
+  transform: translate3d(20px, 60px, -80px);
 }
 
 .container .item.active:nth-child(11) {
-  transform: translate3d(-110px, 110px, 0px);
+  transform: translate3d(-130px, 90px, 20px);
 }
 
 .container .item.active:nth-child(12) {
-  transform: translate3d(60px, 110px, -110px);
+  transform: translate3d(80px, 90px, -120px);
 }
 
 .container .item.active:nth-child(13) {
-  transform: translate3d(60px, -90px, 90px);
+  transform: translate3d(80px, -140px, 90px);
 }
 
 .container .item.active:nth-child(14) {
-  transform: translate3d(-60px, -80px, -110px);
+  transform: translate3d(-80px, -140px, -130px);
 }
 
 .container .item.active:nth-child(15) {
-  transform: translate3d(-110px, 60px, 110px);
+  transform: translate3d(-130px, 40px, 130px);
 }
 
 .container .item.active:nth-child(16) {
-  transform: translate3d(25px, 130px, 25px);
+  transform: translate3d(45px, 110px, 45px);
 }
 
 .container .item.active:nth-child(17) {
-  transform: translate3d(-110px, 75px, -110px);
+  transform: translate3d(-130px, 55px, -130px);
 }
 
 .container .item.active:nth-child(18) {
-  transform: translate3d(-40px, 0px, -110px);
+  transform: translate3d(-60px, -60px, -130px);
 }
 
 .container .item.active:nth-child(19) {
-  transform: translate3d(45px, 35px, 75px);
+  transform: translate3d(65px, -25px, 95px);
 }
 
 .container .item.active:nth-child(20) {
-  transform: translate3d(-65px, 110px, 90px);
+  transform: translate3d(-85px, 90px, 110px);
 }
 
 .container .item.active:nth-child(21) {
-  transform: translate3d(-75px, 110px, -100px);
+  transform: translate3d(-95px, 90px, -120px);
 }
 
 
@@ -156,17 +155,22 @@
 }
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: 500px)  {
-  .sphere {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: 0;
+  .wrapper {
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 889px) {
+  .wrapper {
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .sphere {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: 48px;
+    margin-right: 64px;
+    margin-bottom: 64px;
   }
 }

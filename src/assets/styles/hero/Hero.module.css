@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 110vh;
+  height: 792px;
   z-index: 10;
   background-image:linear-gradient(0deg, rgba(237,242,244,1) 0%, rgba(237,242,244,0) 100%), url(../../images/texture.png);
 }
@@ -16,17 +16,12 @@
   left: 0;
 }
 
-.content {
-  padding: 48px;
-  width: 100%;
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  padding: 64px 24px;
 }
 
 .introduction {
@@ -45,50 +40,40 @@
   margin: 0;
 }
 
-@media screen and (min-height: 840px) and (max-width: 595px) {
-  .hero {
-    height: 90vh;
-  }  
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (min-width: 480px) {
-  .content {
-    align-items: center;
-  }
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 889px) {
   .hero {
-    height: 75vh;
+    height: 90vh
   }
   .content {
     align-items: flex-start;
     justify-content: center;
-    padding: 0 64px;
+    text-align: left;
+  }
+  .wrapper {
+    padding: 24px 48px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .content {
-    padding: 0 128px;
-  }
-}
-
-@media screen and (max-height: 570px) {
   .hero {
-    height: 100vh;
+    height: 80vh
   }
-  .content {
-    padding: 48px;
-  } 
 }
 
 @media (orientation: landscape) and (hover: none) and (pointer: coarse) and (max-height: 500px) {
   .hero {
-    min-height: 150vh;
+    height: 120vh
   }
   .content {
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
+    text-align: left;
   }
 }

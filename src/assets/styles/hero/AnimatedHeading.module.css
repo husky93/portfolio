@@ -1,7 +1,7 @@
 .container {
   position: relative;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
 }
 
 .heading {
@@ -41,9 +41,6 @@
 }
 
 @media screen and (min-width: 480px) {
-  .container {
-    text-align: center;
-  }
   .heading {
     font-size: 72px;
   }
@@ -53,14 +50,17 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    text-align: left;
-  }
   .heading {
     font-size: 92px;
   }
   .heading.sm {
     font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 889px) {
+  .container {
+    text-align: left;
   }
 }
 

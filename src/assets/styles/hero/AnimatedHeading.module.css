@@ -59,6 +59,9 @@
 }
 
 @media screen and (min-width: 889px) {
+  .heading {
+    font-size: 106px;
+  }
   .container {
     text-align: left;
   }

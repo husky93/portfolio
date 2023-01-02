@@ -12,6 +12,7 @@ interface ProjectDetailsProps {
   description: string;
   ghLink?: string;
   liveLink?: string;
+  apiLink?: string;
   hidden?: boolean;
 }
 
@@ -21,6 +22,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   description,
   ghLink,
   liveLink,
+  apiLink,
   hidden,
 }) => {
   return (
@@ -35,6 +37,11 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
         {ghLink && (
           <Button navigateTo={ghLink} hidden={hidden}>
             <GhIcon /> Code
+          </Button>
+        )}
+        {apiLink && (
+          <Button navigateTo={apiLink} hidden={hidden}>
+            <GhIcon /> API Code
           </Button>
         )}
         {liveLink && (

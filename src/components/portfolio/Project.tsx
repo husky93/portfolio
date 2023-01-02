@@ -14,6 +14,7 @@ interface ProjectProps {
   description: string;
   ghLink?: string;
   liveLink?: string;
+  apiLink?: string;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -25,6 +26,7 @@ const Project: React.FC<ProjectProps> = ({
   description,
   ghLink,
   liveLink,
+  apiLink,
 }) => {
   const { containerRef, isVisible, hasIntersected } = useObserver(0.4);
   const { sectionRef, offset, windowHeight } = useParallax();
@@ -42,6 +44,7 @@ const Project: React.FC<ProjectProps> = ({
         description={description}
         ghLink={ghLink}
         liveLink={liveLink}
+        apiLink={apiLink}
         hidden={!hasIntersected}
       >
         {children}

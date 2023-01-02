@@ -18,6 +18,7 @@ import { ReactComponent as WebpackIcon } from '../../assets/icons/webpack.svg';
 import { ReactComponent as NodeIcon } from '../../assets/icons/nodejs.svg';
 import { ReactComponent as ExpressIcon } from '../../assets/icons/express.svg';
 import { ReactComponent as MongoIcon } from '../../assets/icons/mongo.svg';
+import { ReactComponent as QueryIcon } from '../../assets/icons/react-query.svg';
 
 const SkillsItem = lazy(() => import('./SkillsItem'));
 
@@ -33,6 +34,7 @@ const skillsArray: Array<SkillsObject> = [
   { icon: <CssIcon />, title: 'CSS' },
   { icon: <GitIcon />, title: 'GIT' },
   { icon: <ReduxIcon />, title: 'Redux' },
+  { icon: <QueryIcon />, title: 'React Query' },
   { icon: <JestIcon />, title: 'Jest' },
   { icon: <TestingIcon />, title: 'testing-library' },
   { icon: <StyledIcon />, title: 'styled-components' },

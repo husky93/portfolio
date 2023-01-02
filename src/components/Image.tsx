@@ -38,7 +38,11 @@ const ImageComponent: React.FC<ImageProps> = ({ alt, imgName, blurHash }) => {
 
   return (
     <img
-      style={{ display: 'block', borderRadius: '0.25rem' }}
+      style={{
+        display: 'block',
+        borderRadius: '0.25rem',
+        objectPosition: '50% 50%',
+      }}
       alt={alt}
       src={imgSrc}
     />

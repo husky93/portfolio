@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy } from 'react';
 import styles from '../../assets/styles/hero/Sphere.module.css';
 import { ReactComponent as JsIcon } from '../../assets/icons/js.svg';
 import { ReactComponent as TsIcon } from '../../assets/icons/typescript.svg';

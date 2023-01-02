@@ -35,7 +35,8 @@
   left: 50%;
   transform-style: preserve-3d;
   transform: translate3d(0px, 0px, 0px);
-  transition: transform 500ms 100ms;
+  transition: transform 1000ms 1900ms, opacity 0ms 1900ms;
+  opacity: 0;
 }
 
 .item svg {
@@ -138,6 +139,10 @@
 
 .container .item.active:nth-child(21) {
   transform: translate3d(-95px, 90px, -120px);
+}
+
+.container .item.active {
+  opacity: 1;
 }
 
 

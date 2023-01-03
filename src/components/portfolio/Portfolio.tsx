@@ -60,7 +60,7 @@ const Portfolio: React.FC<PortfolioProps> = ({}) => {
           </Project>
           <Project
             title="Full-Stack Ecommerce Admin Dashboard"
-            description="Admin Dashboard RESTful Full-Stack project based on Typescript and React on frontend and Node.js, Express and MongoDB on backend. CRUD application with JWT Token authentication. This project is a first frontend part of an ecommerce platform based on single API. Second part (store frontend) is still in progress."
+            description="Admin Dashboard RESTful Full-Stack project based on Typescript and React on frontend and Node.js, Express and MongoDB on backend. CRUD application with JWT Token authentication. This project is a first frontend part of an ecommerce store based on single API."
             imageName="admin"
             imageBlurHash="L5SF@S_40zyVDN^StRxYInX9M{R*"
             imagePosition="left"
